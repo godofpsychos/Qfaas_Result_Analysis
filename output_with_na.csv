@@ -1,0 +1,2 @@
+Experiment type,Experiment Subtype,WorkFlowName,InstanceId,Total_workflow_exec_time_E2E,TotalFuntionExecutionTimeWithCritical,TotalFuntionExecutionTime,Total_waiting_time,TotalCost,Q_Results,Poller_ex_time,Exec_time_excluding_poller
+test_AZ,RH,QXFaaSSerialHardwareV3AWS,f5b132a1163244aea41208485aeaa6f8,1570.203,650.553,650.66,919.65,0.0008214915777587891,"cnnejcgalmrcvvncrb9g->use:0,wait:5.569",120.396,530.264
