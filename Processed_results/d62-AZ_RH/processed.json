@@ -1,0 +1,36 @@
+{
+    "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
+    "InstanceId": "1bd83a81abf94aef8e7f54241a5a9bfa",
+    "TotalCost": "0.00002093363018798828",
+    "Total_workflow_exec_time_E2E": 138.07,
+    "E2E_WF_Exec_Time": 137.428,
+    "Inter_Function_Time": 137.472,
+    "Total_waiting_time": 0.6419999999999959,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 137.428,
+            "Total waiting time": 0.6419999999999959
+        }
+    ],
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 38.367,
+            "job_id": "cwhpx2cmptp0008h9asg",
+            "ibmq_token": "68ef9a58572e867b460d9164761e49939b880b7127861af7fdbf703e44982c434c1dee202c8931f2e0d1d959ee311e6dc1cfeda6ec816d4d0429d42a618758f9"
+        },
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 39.173,
+            "job_id": "cwhpx7m40e000088xp3g",
+            "ibmq_token": "f462426ff94edf1956d6474df648550dd7c89d4b3245d6b13e41442f0d12ef13f5a1abc24a94265a2f4b0d231aea81fd09f956433bd064b90ee07f610b6aaf3e"
+        }
+    ],
+    "Async_Poller_Time": 51.102,
+    "Inter_Function_Time_Excluding_Poller": 86.37,
+    "Total_Quantum_Queue_Time": 77.53999999999999,
+    "Total_Quantum_Exectime": 6,
+    "Job_Ids": "cwhpx2cmptp0008h9asg,cwhpx7m40e000088xp3g"
+}

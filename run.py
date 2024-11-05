@@ -7,42 +7,43 @@ def list_dir(path):
 
 # result_analysis.data_analysis("path to outputs","path to dag","path to store results")
 # result_analysis.data_analysis([('/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/output/test/results.json',"/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/dags/test/dag.json","/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/Processed_results/test")])
-dags_folder_path="/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/dags"
-output_folder_path="/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/output"
-processed_result_path="/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/Processed_results"
+pwd = os.getcwd()
+dags_folder_path=f"{pwd}/dags"
+output_folder_path=f"{pwd}/output"
+processed_result_path=f"{pwd}/Processed_results"
 
 dir_in_dags= list_dir(dags_folder_path)
 dir_in_output= list_dir(output_folder_path)
 dir_in_processed=list_dir(processed_result_path)
 
-# for name in dir_in_dags:
-#     if name in dir_in_output:
-#         if name in dir_in_processed:
-#             continue
-#         else :
-#             os.makedirs(processed_result_path+'/'+name)
+for name in dir_in_dags:
+    if name in dir_in_output:
+        if name in dir_in_processed:
+            continue
+        else :
+            os.makedirs(processed_result_path+'/'+name)
     
-#     else :
-#         print("Please make dir available for ",name," in output folder")
+    else :
+        print("Please make dir available for ",name," in output folder")
 
-# dir_in_processed=list_dir(processed_result_path)
-# for name in  dir_in_output:
-#     if name in dir_in_dags:
-#         if name in dir_in_processed:
-#             continue
-#         else :
-#             os.makedirs(processed_result_path+'/'+name)
+dir_in_processed=list_dir(processed_result_path)
+for name in  dir_in_output:
+    if name in dir_in_dags:
+        if name in dir_in_processed:
+            continue
+        else :
+            os.makedirs(processed_result_path+'/'+name)
     
-#     else :
-#         print("Please make dir available for ",name," in dag folder")
+    else :
+        print("Please make dir available for ",name," in dag folder")
 
-# dir_in_processed=list_dir(processed_result_path)
-# anylysis_list = []
-# for name in dir_in_dags:
-#     if name in dir_in_output and name in dir_in_processed:
-#         anylysis_list.append((output_folder_path+'/'+name+'/results.json',dags_folder_path+'/'+name+'/dag.json',processed_result_path+'/'+name))
-        
-# result_analysis.data_analysis(anylysis_list)
+dir_in_processed=list_dir(processed_result_path)
+anylysis_list = []
+for name in dir_in_dags:
+    if name in dir_in_output and name in dir_in_processed:
+        anylysis_list.append((output_folder_path+'/'+name+'/results.json',dags_folder_path+'/'+name+'/dag.json',processed_result_path+'/'+name))
+
+result_analysis.data_analysis(anylysis_list)
 
 
 #building CSV From results
@@ -70,8 +71,9 @@ def flatten_dict(d, all_fields):
             elif isinstance(value, list):
                 if key == 'Q_Results':
                     listtt =[]
+                    print("Value",value)
                     for dictt in value:
-                        strr = f"{dictt["job_id"]}->use:{dictt["quantum_usage_sec"]},wait:{dictt["total_queue_waittime"]}"
+                        strr = f"{dictt['job_id']}->use:{dictt['Quantum_Exec_Time']},wait:{dictt['Quantum_Queue_Time']}"
                         listtt.append(strr)
                     strrr = ','.join(listtt)
                     flat_dict[key]=strrr
@@ -90,7 +92,7 @@ all_fields = ["Experiment type","Experiment Subtype","WorkFlowName","InstanceId"
 flattened_data = [flatten_dict(item, all_fields) for item in list_dict]
 
 # Specify the CSV file path
-csv_file_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/output_with_na.csv'
+csv_file_path = f"{pwd}/output_with_na.csv"
 
 # Writing to CSV
 with open(csv_file_path, mode='w', newline='') as file:

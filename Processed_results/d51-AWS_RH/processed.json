@@ -1,0 +1,22 @@
+{
+    "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
+    "InstanceId": "offloader-d51-q20",
+    "TotalCost": "0.00000029846543559341",
+    "Total_workflow_exec_time_E2E": 114.731,
+    "E2E_WF_Exec_Time": 7.915,
+    "Inter_Function_Time": 7.915,
+    "Total_waiting_time": 106.81599999999999,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 7.915,
+            "Total waiting time": 106.81599999999999
+        }
+    ],
+    "Async_Poller_Time": 0.109,
+    "Inter_Function_Time_Excluding_Poller": 7.806,
+    "Total_Quantum_Queue_Time": 0,
+    "Total_Quantum_Exectime": 0,
+    "Job_Ids": "e04b40bc-a30a-4c08-91bb-937d2cf1d98e,960ecdce-0aba-4fea-a534-93a2629cccbf"
+}

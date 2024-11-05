@@ -1,0 +1,92 @@
+{
+  "WorkflowName": "QXFaaSSerialHardwareV3AWS",
+  "Nodes": [
+    {
+      "NodeId": "1",
+      "NodeName": "Splitter",
+      "Path": "examples/SerialHardwareV3AWS/Splitter",
+      "EntryPoint": "Splitter.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": false,
+      "IsContainerised": true
+    },
+    {
+      "NodeId": "2",
+      "NodeName": "Transpiler",
+      "Path": "examples/SerialHardwareV3AWS/Transpiler",
+      "EntryPoint": "Transpiler.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": false,
+      "IsContainerised": true
+    },
+    {
+      "NodeId": "3",
+      "NodeName": "Submitter",
+      "Path": "examples/SerialHardwareV3AWS/Submitter",
+      "EntryPoint": "Submitter.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": false,
+      "IsContainerised": true
+    },
+    {
+      "NodeId": "4",
+      "NodeName": "Merger",
+      "Path": "examples/SerialHardwareV3AWS/Merger",
+      "EntryPoint": "Merger.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": true,
+      "IsContainerised": true
+    },
+    {
+      "NodeId": "5",
+      "NodeName": "Poller",
+      "Path": "examples/SerialHardwareV3AWS/Poller",
+      "EntryPoint": "Poller.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": false,
+      "IsContainerised": true
+    },
+    {
+      "NodeId": "6",
+      "NodeName": "Reconstructor",
+      "Path": "examples/SerialHardwareV3AWS/Reconstructor",
+      "EntryPoint": "Reconstructor.py",
+      "CSP": "NA",
+      "MemoryInMB": 1536,
+      "IsAsync": false,
+      "IsContainerised": true
+    }
+  ],
+  "Edges": [
+    {
+      "Splitter": [
+        "Transpiler"
+      ]
+    },
+    {
+      "Transpiler": [
+        "Submitter"
+      ]
+    },
+    {
+      "Submitter": [
+        "Merger"
+      ]
+    },
+    {
+      "Merger": [
+        "Poller"
+      ]
+    },
+    {
+      "Poller": [
+        "Reconstructor"
+      ]
+    }
+  ]
+}
