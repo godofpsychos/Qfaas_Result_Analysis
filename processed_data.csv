@@ -37,3 +37,8 @@ t10-AWS_dynamic_sim,0.00013391926115209390,60.984,N/A for simulator,N/A for simu
 d51-AWS_static_sim,0.00124035029887953514,209.612,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,386.12,197.483,288920,N/A for simulator
 d51-Az_static_sim,0.00049239110351562501,161.564,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,186.864,95.539,288542,N/A for simulator
 t10-Az_dynamic_sim,0.00002078833569335938,107.904,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,75.118,75.095,31656,N/A for simulator
+t6-Az_Serial_Sim,0.00003837784991455078,50.583,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,34.342,34.298,16559,N/A for simulator
+t6-Aws_Serial_Sim,0.00034998112802075195,135.015,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,125.17,124.879,18590,N/A for simulator
+t10-Aws_Serial_Sim,0.00007675196771006967,114.688,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,112.177,111.998,20175,N/A for simulator
+t10-Az_Serial_Sim,0.00007063207092285156,85.733,N/A for simulator,N/A for simulator,N/A for simulator,N/A for simulator,67.304,67.265,21673,N/A for simulator
+t16-Aws_Serial_Sim,0.00039262277919896433,703.128,62.154,N/A for simulator,N/A for simulator,124.89000000000001,187.044,186.733,19296,N/A for simulator

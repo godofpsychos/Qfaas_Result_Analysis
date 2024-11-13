@@ -1,0 +1,92 @@
+{
+    "WorkflowName": "QXFaaSSerialHardwareV3AWSS3Offload",
+    "Nodes": [
+      {
+        "NodeId": "1",
+        "NodeName": "Splitter",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Splitter",
+        "EntryPoint": "Splitter.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": false,
+        "IsContainerised": true
+      },
+      {
+        "NodeId": "2",
+        "NodeName": "Transpiler",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Transpiler",
+        "EntryPoint": "Transpiler.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": false,
+        "IsContainerised": true
+      },
+      {
+        "NodeId": "3",
+        "NodeName": "Submitter",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Submitter",
+        "EntryPoint": "Submitter.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": false,
+        "IsContainerised": true
+      },
+      {
+        "NodeId": "4",
+        "NodeName": "Merger",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Merger",
+        "EntryPoint": "Merger.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": true,
+        "IsContainerised": true
+      },
+      {
+        "NodeId": "5",
+        "NodeName": "Poller",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Poller",
+        "EntryPoint": "Poller.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": false,
+        "IsContainerised": true
+      },
+      {
+        "NodeId": "6",
+        "NodeName": "Reconstructor",
+        "Path": "examples/SerialHardwareV3AWSS3Offload/Reconstructor",
+        "EntryPoint": "Reconstructor.py",
+        "CSP": "NA",
+        "MemoryInMB": 1536,
+        "IsAsync": false,
+        "IsContainerised": true
+      }
+    ],
+    "Edges": [
+      {
+        "Splitter": [
+          "Transpiler"
+        ]
+      },
+      {
+        "Transpiler": [
+          "Submitter"
+        ]
+      },
+      {
+        "Submitter": [
+          "Merger"
+        ]
+      },
+      {
+        "Merger": [
+          "Poller"
+        ]
+      },
+      {
+        "Poller": [
+          "Reconstructor"
+        ]
+      }
+    ]
+  }

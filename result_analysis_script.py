@@ -253,10 +253,11 @@ class result_analysis:
                 results["Inter_Function_Time_Excluding_Poller"] = (float(total_func_exec_time) - float(poller_ex_time))
                 results['Total_Quantum_Queue_Time'] = sum([x['Quantum_Queue_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
                 results['Total_Quantum_Exectime'] = sum([x['Quantum_Exec_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
-                if 'Q_Results' in results:
-                    results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
-                elif 'job_id' in quantum_list[0]:
-                    results['Job_Ids'] = ','.join([x['job_id'] for x in quantum_list]) if quantum_list != None else ''
+                if quantum_list != None:
+                    if 'Q_Results' in results:
+                        results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
+                    elif 'job_id' in quantum_list[0]:
+                        results['Job_Ids'] = ','.join([x['job_id'] for x in quantum_list]) if quantum_list != None else ''
                 results
             # result_dir = wf_path + '/Results'
             result_dir = out_path

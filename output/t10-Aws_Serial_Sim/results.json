@@ -1,0 +1,85 @@
+{
+  "statusCode": 200,
+  "body": {
+    "data": {
+      "result": [
+        -0.103515625,
+        0.046875,
+        -0.041015625,
+        0.04296875,
+        0.0546875,
+        -0.0390625,
+        0,
+        0.005859375,
+        -0.060546875,
+        -0.001953125
+      ]
+    },
+    "devices": [
+      {
+        "device": "aer",
+        "backend": "ibm_brisbane"
+      }
+    ]
+  },
+  "metadata": {
+    "workflow_instance_id": 1,
+    "workflow_start_time": 1731493126067,
+    "request_timestamp": 12345,
+    "session_id": "123",
+    "overheads": 1731493113722,
+    "deployment_id": "trotter-q10-serial",
+    "functions": [
+      {
+        "1": {
+          "start_delta": 2,
+          "end_delta": 1801,
+          "mem_before": 169406464,
+          "mem_after": 169947136,
+          "in_payload_bytes": 3944,
+          "out_payload_bytes": 3475
+        }
+      },
+      {
+        "2": {
+          "start_delta": 4165,
+          "end_delta": 33969,
+          "mem_before": 137875456,
+          "mem_after": 224493568,
+          "in_payload_bytes": 3499,
+          "out_payload_bytes": 5555
+        }
+      },
+      {
+        "3": {
+          "start_delta": 34149,
+          "end_delta": 114474,
+          "mem_before": 351985664,
+          "mem_after": 381390848,
+          "in_payload_bytes": 5555,
+          "out_payload_bytes": 5856
+        }
+      },
+      {
+        "4": {
+          "start_delta": 114620,
+          "end_delta": 114690,
+          "mem_before": 139005952,
+          "mem_after": 139005952,
+          "in_payload_bytes": 5856,
+          "out_payload_bytes": 1353
+        }
+      },
+      {
+        "253": {
+          "start_delta": 114829,
+          "end_delta": 115008,
+          "mem_before": 42070016,
+          "mem_after": 43118592,
+          "in_payload_bytes": 1321,
+          "out_payload_bytes": 1321
+        }
+      }
+    ]
+  }
+}
