@@ -126,6 +126,7 @@ def custom_dfs(graph, node, dataframe,result_list, node_to_nodeid,path="",ntime=
     nodeId=node_to_nodeid[node]
     # print(nodeId)
     # print(dataframe)
+    print("Node Id",nodeId)
     node_data=dataframe.loc[nodeId].to_dict()
     # print(node_data)
     ntime+= node_data['net_time']
@@ -246,7 +247,7 @@ class result_analysis:
                     qresults.append(quantum_results(job_id=job_id,ibmq_token=qtoken))
                 results["Q_Results"] = qresults
             print("*****************************************************************************")
-            
+
             if poller_ex_time != -1:
                 results["Async_Poller_Time"] = poller_ex_time
                 results["Inter_Function_Time_Excluding_Poller"] = (float(total_func_exec_time) - float(poller_ex_time))

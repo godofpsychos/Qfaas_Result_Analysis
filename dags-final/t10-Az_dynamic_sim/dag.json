@@ -1,0 +1,86 @@
+{
+    "WorkflowName": "QXFAASMapWFSerial",
+    "Nodes": [
+        {
+            "NodeId": "1",
+            "NodeName": "Splitter",
+            "Path": "examples/qmap-aws-dynamic-serial/Splitter",
+            "EntryPoint": "Splitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "2",
+            "NodeName": "Transpiler",
+            "Path": "examples/qmap-aws-dynamic-serial/Transpiler",
+            "EntryPoint": "Transpiler.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "3",
+            "NodeName": "Submitter",
+            "Path": "examples/qmap-aws-dynamic-serial/Submitter",
+            "EntryPoint": "Submitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "4",
+            "NodeName": "Merger",
+            "Path": "examples/qmap-aws-dynamic-serial/Merger",
+            "EntryPoint": "Merger.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "5",
+            "NodeName": "Reconstructor",
+            "Path": "examples/qmap-aws-dynamic-serial/Reconstructor",
+            "EntryPoint": "Reconstructor.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        }
+    ],
+    "Edges": [
+        {
+            "Splitter": [
+                "Transpiler"
+            ]
+        },
+        {
+            "Transpiler": [
+                "Submitter"
+            ]
+        },
+        {
+            "Submitter": [
+                "Merger"
+            ]
+        },
+        {
+            "Merger": [
+                "Reconstructor"
+            ]
+        }
+    ],
+    "SubGraphs": [
+        {
+            "Listname": "List",
+            "Nodes": [
+                "Transpiler",
+                "Submitter"
+            ]
+        }
+    ]
+}

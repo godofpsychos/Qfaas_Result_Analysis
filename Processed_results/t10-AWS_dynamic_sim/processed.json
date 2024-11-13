@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASMapWFSerial",
+    "InstanceId": "dynamic-q10-d37-trotter",
+    "TotalCost": "0.00013391926115209390",
+    "Total_workflow_exec_time_E2E": 60.984,
+    "E2E_WF_Exec_Time": 51.739,
+    "Inter_Function_Time": 52.046,
+    "Total_waiting_time": 9.245000000000005,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "38760",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+            "Total_exec_time": 51.739,
+            "Total waiting time": 9.245000000000005
+        }
+    ]
+}
