@@ -76,10 +76,11 @@ def creating_outobject(url):
     out_obj=json.loads(data['output'])
     # print(out_obj['_body'].keys())
     boddy=out_obj['_body']
-    boddy['devices'] = boddy['jobs']
+    boddy['devices'] = boddy['jobs'] if 'jobs' in boddy else None
     # change all instances of key 'id' to key 'job_id'
-    for i in range(len(boddy['devices'])):
-        boddy['devices'][i]['job_id'] = boddy['devices'][i].pop('id')
+    if boddy['devices'] != None:
+        for i in range(len(boddy['devices'])):
+            boddy['devices'][i]['job_id'] = boddy['devices'][i].pop('id')
 
     # boddy['devices']=[{'device':'ibm_brisbane','job_id' : 'cnnejcgalmrcvvncrb9g',
     # 'qtoken' : '83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2'}, {'device':'ibm_brisbane','job_id' : 'cnnejcgalmrcvvncrb9g',

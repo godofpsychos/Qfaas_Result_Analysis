@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASIBMSerialHTest",
+    "InstanceId": "2bab08cb369d428f9fb0ec3e9eeaa8aa",
+    "TotalCost": "0.00087756847125244138",
+    "Total_workflow_exec_time_E2E": 402.883,
+    "E2E_WF_Exec_Time": 402.005,
+    "Inter_Function_Time": 402.117,
+    "Total_waiting_time": 0.8779999999999859,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Reconstructor->",
+    "Inter_Function_Payload_Size": "103173",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Reconstructor->",
+            "Total_exec_time": 402.005,
+            "Total waiting time": 0.8779999999999859
+        }
+    ]
+}
