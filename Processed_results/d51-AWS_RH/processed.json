@@ -1,22 +1,37 @@
 {
     "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
-    "InstanceId": "offloader-d51-q20",
-    "TotalCost": "0.00000029846543559341",
-    "Total_workflow_exec_time_E2E": 114.731,
-    "E2E_WF_Exec_Time": 7.915,
-    "Inter_Function_Time": 7.915,
-    "Total_waiting_time": 106.81599999999999,
+    "InstanceId": "dynamic-q20-d51-rd-ld",
+    "TotalCost": "0.00003689892627318916",
+    "Total_workflow_exec_time_E2E": 234.193,
+    "E2E_WF_Exec_Time": 119.775,
+    "Inter_Function_Time": 119.775,
+    "Total_waiting_time": 114.418,
     "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "128560",
     "PathResults": [
         {
             "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
-            "Total_exec_time": 7.915,
-            "Total waiting time": 106.81599999999999
+            "Total_exec_time": 119.775,
+            "Total waiting time": 114.418
         }
     ],
-    "Async_Poller_Time": 0.109,
-    "Inter_Function_Time_Excluding_Poller": 7.806,
-    "Total_Quantum_Queue_Time": 0,
-    "Total_Quantum_Exectime": 0,
-    "Job_Ids": "e04b40bc-a30a-4c08-91bb-937d2cf1d98e,960ecdce-0aba-4fea-a534-93a2629cccbf"
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 51.883,
+            "job_id": "cwhnqh640e000088xgyg",
+            "ibmq_token": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49"
+        },
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 101.699,
+            "job_id": "cwhnqtf543p00086den0",
+            "ibmq_token": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+        }
+    ],
+    "Async_Poller_Time": 29.92,
+    "Inter_Function_Time_Excluding_Poller": 89.855,
+    "Total_Quantum_Queue_Time": 153.582,
+    "Total_Quantum_Exectime": 6,
+    "Job_Ids": "cwhnqh640e000088xgyg,cwhnqtf543p00086den0"
 }

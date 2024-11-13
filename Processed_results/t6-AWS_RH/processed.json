@@ -1,22 +1,31 @@
 {
     "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
-    "InstanceId": "offloader-d37-q6",
-    "TotalCost": "0.00000225679880731010",
-    "Total_workflow_exec_time_E2E": 112.399,
-    "E2E_WF_Exec_Time": 11.604,
-    "Inter_Function_Time": 11.604,
-    "Total_waiting_time": 100.795,
+    "InstanceId": "dynamic-q6-d37-trotter-lq",
+    "TotalCost": "0.00000911670842401352",
+    "Total_workflow_exec_time_E2E": 265.902,
+    "E2E_WF_Exec_Time": 59.965,
+    "Inter_Function_Time": 59.965,
+    "Total_waiting_time": 205.93699999999998,
     "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "31136",
     "PathResults": [
         {
             "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
-            "Total_exec_time": 11.604,
-            "Total waiting time": 100.795
+            "Total_exec_time": 59.965,
+            "Total waiting time": 205.93699999999998
         }
     ],
-    "Async_Poller_Time": 0.057,
-    "Inter_Function_Time_Excluding_Poller": 11.546999999999999,
-    "Total_Quantum_Queue_Time": 0,
-    "Total_Quantum_Exectime": 0,
-    "Job_Ids": "46db8302-22e3-46ee-82f6-7c24e0e39384"
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 186.836,
+            "job_id": "cwjfqpymptp00085td00",
+            "ibmq_token": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+        }
+    ],
+    "Async_Poller_Time": 24.417,
+    "Inter_Function_Time_Excluding_Poller": 35.548,
+    "Total_Quantum_Queue_Time": 186.836,
+    "Total_Quantum_Exectime": 2,
+    "Job_Ids": "cwjfqpymptp00085td00"
 }

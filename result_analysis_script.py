@@ -100,6 +100,7 @@ def creating_outobject(url):
             mem_after = obj['mem_after']
             net_time=abs(end_delta-start_delta)
             net_mem=abs(mem_after-mem_before)
+            payload_size=int(obj['in_payload_bytes'])
             temp={
                 'NodeId':fn_name,
                 'start_delta':start_delta,
@@ -109,7 +110,8 @@ def creating_outobject(url):
                 'net_time':net_time,
                 'net_mem':net_mem,
                 # measure cost based on azure or aws
-                'cost':aws_cost_factor*(net_time/1000)*(net_mem/1073741824) if csp == 'aws' else az_cost_factor*(net_time/1000)*(net_mem/1073741824)
+                'cost':aws_cost_factor*(net_time/1000)*(net_mem/1073741824) if csp == 'aws' else az_cost_factor*(net_time/1000)*(net_mem/1073741824),
+                'inter_function_payload_size':payload_size
             }
             out.append(temp)
     return out,instanceId,quantum_list
@@ -150,7 +152,8 @@ class result_analysis:
     'mem_after': 'max',
     'net_time': 'sum',
     'net_mem': 'sum',
-    'cost': 'sum'
+    'cost': 'sum',
+    'inter_function_payload_size': 'sum'
 })
             print(df)
             df=df_grouped
@@ -205,6 +208,7 @@ class result_analysis:
             waiting_time=(total_workflow_exec_time-max_time)
             total_cost=df['cost'].sum()
             total_func_exec_time = df['net_time'].sum()/1000
+            inter_function_payload_size = df['inter_function_payload_size'].sum()
 
             print('For workflow:\t', workflow_name,'\n\t InstanceId:\t',instance_id ,'\n\t\tTotal workflow execution time(2E Workflow Exec. Time):\t',total_workflow_exec_time ,'\n\t\tTotal function execution time:\t',total_func_exec_time, 'seconds\n\t\tTotal funtion exec time(as per critical path):\t',max_time,'seconds\n\t\tTotal waiting time(as per critical path):\t',waiting_time,'seconds\n\t\tCritical Path:\t',critical_path,'\b\b\n\t\tTotal Cost: \t$ ',total_cost)
             results={
@@ -216,6 +220,7 @@ class result_analysis:
                 "Inter_Function_Time":float(total_func_exec_time),
                 "Total_waiting_time":waiting_time,
                 "CriticalPath":critical_path,
+                "Inter_Function_Payload_Size": str(inter_function_payload_size),
                 "PathResults": []
             }
             

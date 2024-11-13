@@ -7,6 +7,7 @@
     "Inter_Function_Time": 471.703,
     "Total_waiting_time": 2805.439,
     "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "148391",
     "PathResults": [
         {
             "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",

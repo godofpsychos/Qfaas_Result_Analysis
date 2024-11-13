@@ -1,0 +1,100 @@
+{
+    "WorkflowName": "QXFAASMapWFOffload",
+    "Nodes": [
+        {
+            "NodeId": "1",
+            "NodeName": "Splitter",
+            "Path": "examples/qmap-aws-offload/Splitter",
+            "EntryPoint": "Splitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "2",
+            "NodeName": "Transpiler",
+            "Path": "examples/qmap-aws-offload/Transpiler",
+            "EntryPoint": "Transpiler.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "3",
+            "NodeName": "Submitter",
+            "Path": "examples/qmap-aws-offload/Submitter",
+            "EntryPoint": "Submitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "4",
+            "NodeName": "Merger",
+            "Path": "examples/qmap-aws-offload/Merger",
+            "EntryPoint": "Merger.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": true,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "5",
+            "NodeName": "Poller",
+            "Path": "examples/qmap-aws-offload/Poller",
+            "EntryPoint": "Poller.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "6",
+            "NodeName": "Reconstructor",
+            "Path": "examples/qmap-aws-offload/Reconstructor",
+            "EntryPoint": "Reconstructor.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        }
+    ],
+    "Edges": [
+        {
+            "Splitter": [
+                "Transpiler"
+            ]
+        },
+        {
+            "Transpiler": [
+                "Submitter"
+            ]
+        },
+        {
+            "Submitter": [
+                "Merger"
+            ]
+        },
+        {
+            "Merger": [
+                "Poller"
+            ]
+        },
+        {
+            "Poller": [
+                "Reconstructor"
+            ]
+        }
+    ],
+    "SubGraphs": [
+        {
+            "Listname": "List",
+            "Nodes": [
+                "Transpiler",
+                "Submitter"
+            ]
+        }
+    ]
+}

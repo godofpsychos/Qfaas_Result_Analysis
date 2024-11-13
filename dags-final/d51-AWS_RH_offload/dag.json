@@ -1,10 +1,10 @@
 {
-  "WorkflowName": "QXFaaSSerialHardwareV3AWS",
+  "WorkflowName": "QXFaaSSerialHardwareV3AWSOffload",
   "Nodes": [
     {
       "NodeId": "1",
       "NodeName": "Splitter",
-      "Path": "examples/SerialHardwareV3AWS/Splitter",
+      "Path": "examples/SerialHardwareV3AWSOffload/Splitter",
       "EntryPoint": "Splitter.py",
       "CSP": "NA",
       "MemoryInMB": 1536,
@@ -14,7 +14,7 @@
     {
       "NodeId": "2",
       "NodeName": "Transpiler",
-      "Path": "examples/SerialHardwareV3AWS/Transpiler",
+      "Path": "examples/SerialHardwareV3AWSOffload/Transpiler",
       "EntryPoint": "Transpiler.py",
       "CSP": "NA",
       "MemoryInMB": 1536,
@@ -24,7 +24,7 @@
     {
       "NodeId": "3",
       "NodeName": "Submitter",
-      "Path": "examples/SerialHardwareV3AWS/Submitter",
+      "Path": "examples/SerialHardwareV3AWSOffload/Submitter",
       "EntryPoint": "Submitter.py",
       "CSP": "NA",
       "MemoryInMB": 1536,
@@ -34,7 +34,7 @@
     {
       "NodeId": "4",
       "NodeName": "Merger",
-      "Path": "examples/SerialHardwareV3AWS/Merger",
+      "Path": "examples/SerialHardwareV3AWSOffload/Merger",
       "EntryPoint": "Merger.py",
       "CSP": "NA",
       "MemoryInMB": 1536,
@@ -44,7 +44,7 @@
     {
       "NodeId": "5",
       "NodeName": "Poller",
-      "Path": "examples/SerialHardwareV3AWS/Poller",
+      "Path": "examples/SerialHardwareV3AWSOffload/Poller",
       "EntryPoint": "Poller.py",
       "CSP": "NA",
       "MemoryInMB": 1536,
@@ -54,7 +54,7 @@
     {
       "NodeId": "6",
       "NodeName": "Reconstructor",
-      "Path": "examples/SerialHardwareV3AWS/Reconstructor",
+      "Path": "examples/SerialHardwareV3AWSOffload/Reconstructor",
       "EntryPoint": "Reconstructor.py",
       "CSP": "NA",
       "MemoryInMB": 1536,

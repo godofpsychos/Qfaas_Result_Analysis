@@ -1,22 +1,55 @@
 {
     "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
-    "InstanceId": "offloader-d29-q20",
-    "TotalCost": "0.00000002581773199425",
-    "Total_workflow_exec_time_E2E": 107.694,
-    "E2E_WF_Exec_Time": 6.859,
-    "Inter_Function_Time": 6.859,
-    "Total_waiting_time": 100.83500000000001,
+    "InstanceId": "dynamic-q20-d29-rd-ld",
+    "TotalCost": "0.00011135155822818374",
+    "Total_workflow_exec_time_E2E": 3715.164,
+    "E2E_WF_Exec_Time": 1687.098,
+    "Inter_Function_Time": 1687.098,
+    "Total_waiting_time": 2028.0660000000003,
     "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "334216",
     "PathResults": [
         {
             "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
-            "Total_exec_time": 6.859,
-            "Total waiting time": 100.83500000000001
+            "Total_exec_time": 1687.098,
+            "Total waiting time": 2028.0660000000003
         }
     ],
-    "Async_Poller_Time": 0.114,
-    "Inter_Function_Time_Excluding_Poller": 6.745,
-    "Total_Quantum_Queue_Time": 0,
-    "Total_Quantum_Exectime": 0,
-    "Job_Ids": "0c559a87-978f-4053-b31f-f89c65d033ce,8dd6636f-29ae-4037-ad0e-396246331461"
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 3169.223,
+            "job_id": "cwhmnsq543p00086da4g",
+            "ibmq_token": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 3114.08,
+            "job_id": "cwhmp8s0r6b0008ppdeg",
+            "ibmq_token": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 3084.511,
+            "job_id": "cwhmpkj9r49g008krbd0",
+            "ibmq_token": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 3187.273,
+            "job_id": "cwhms6m0r6b0008ppdwg",
+            "ibmq_token": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 3180.505,
+            "job_id": "cwhmscd0r6b0008ppdy0",
+            "ibmq_token": "ca63d139727d8ddfd9d2ee8ccc8bcc53528b269276c95946c515ba794fd0f3a790eb2febe6ad5fedefd2925a9fcfc5908d044d8d11601d264bcb349fc298bcbc"
+        }
+    ],
+    "Async_Poller_Time": 1165.421,
+    "Inter_Function_Time_Excluding_Poller": 521.6769999999999,
+    "Total_Quantum_Queue_Time": 15735.592,
+    "Total_Quantum_Exectime": 10,
+    "Job_Ids": "cwhmnsq543p00086da4g,cwhmp8s0r6b0008ppdeg,cwhmpkj9r49g008krbd0,cwhms6m0r6b0008ppdwg,cwhmscd0r6b0008ppdy0"
 }
