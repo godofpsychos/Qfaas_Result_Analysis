@@ -1,0 +1,55 @@
+{
+    "WorkFlowName": "QXFaaSSerialHardwareV3AWS",
+    "InstanceId": "f781f216ec3246b59f27186924da0b4f",
+    "TotalCost": "0.00005513776928710937",
+    "Total_workflow_exec_time_E2E": 3277.093,
+    "E2E_WF_Exec_Time": 471.654,
+    "Inter_Function_Time": 471.703,
+    "Total_waiting_time": 2805.439,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "148391",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 471.654,
+            "Total waiting time": 2805.439
+        }
+    ],
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 2630.851,
+            "job_id": "cwhny6r9r49g008krgyg",
+            "ibmq_token": "68ef9a58572e867b460d9164761e49939b880b7127861af7fdbf703e44982c434c1dee202c8931f2e0d1d959ee311e6dc1cfeda6ec816d4d0429d42a618758f9"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 2606.542,
+            "job_id": "cwhnydh40e000088xj2g",
+            "ibmq_token": "f462426ff94edf1956d6474df648550dd7c89d4b3245d6b13e41442f0d12ef13f5a1abc24a94265a2f4b0d231aea81fd09f956433bd064b90ee07f610b6aaf3e"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 2585.632,
+            "job_id": "cwhnyk2543p00086dfr0",
+            "ibmq_token": "8f1efad747a9c53280390889e35c27c3a8fd0eb990005867998d2fa400f6e92c88f65524330a1c29e3792d9f7913e6f8b313ae3948c8a3534a6350af75ae0b72"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 2566.319,
+            "job_id": "cwhnyrb31we000880sh0",
+            "ibmq_token": "68ef9a58572e867b460d9164761e49939b880b7127861af7fdbf703e44982c434c1dee202c8931f2e0d1d959ee311e6dc1cfeda6ec816d4d0429d42a618758f9"
+        },
+        {
+            "Quantum_Exec_Time": 2,
+            "Quantum_Queue_Time": 2551.911,
+            "job_id": "cwhnyz331we000880sm0",
+            "ibmq_token": "ca63d139727d8ddfd9d2ee8ccc8bcc53528b269276c95946c515ba794fd0f3a790eb2febe6ad5fedefd2925a9fcfc5908d044d8d11601d264bcb349fc298bcbc"
+        }
+    ],
+    "Async_Poller_Time": 335.052,
+    "Inter_Function_Time_Excluding_Poller": 136.65099999999995,
+    "Total_Quantum_Queue_Time": 12941.255,
+    "Total_Quantum_Exectime": 10,
+    "Job_Ids": "cwhny6r9r49g008krgyg,cwhnydh40e000088xj2g,cwhnyk2543p00086dfr0,cwhnyrb31we000880sh0,cwhnyz331we000880sm0"
+}

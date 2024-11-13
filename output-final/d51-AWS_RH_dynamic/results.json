@@ -1,0 +1,223 @@
+{
+  "statusCode": 200,
+  "body": {
+    "data": {
+      "result": [
+        0.013396000000000033,
+        -0.11274200000000015,
+        -0.14640000000000017,
+        0.17849200000000023,
+        0.35762600000000044,
+        -0.05640800000000008,
+        -0.5406920000000007,
+        0.4673600000000006,
+        0.04773400000000007,
+        0.9918840000000014,
+        -0.11186000000000021,
+        0.0788700000000001,
+        0.13456600000000024,
+        -0.15159600000000023,
+        -0.16803400000000024,
+        0.4265160000000007,
+        -0.1647300000000002,
+        0.34025400000000044,
+        -0.1440600000000002,
+        0.3828620000000004
+      ]
+    },
+    "devices": [
+      {
+        "device": "ibm_brisbane",
+        "qtoken": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49"
+      },
+      {
+        "device": "ibm_brisbane",
+        "qtoken": "f462426ff94edf1956d6474df648550dd7c89d4b3245d6b13e41442f0d12ef13f5a1abc24a94265a2f4b0d231aea81fd09f956433bd064b90ee07f610b6aaf3e"
+      }
+    ],
+    "jobs": [
+      {
+        "device": "ibm_brisbane",
+        "qtoken": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49",
+        "id": "cwqsdyqehebg008hxr50"
+      },
+      {
+        "device": "ibm_brisbane",
+        "qtoken": "f462426ff94edf1956d6474df648550dd7c89d4b3245d6b13e41442f0d12ef13f5a1abc24a94265a2f4b0d231aea81fd09f956433bd064b90ee07f610b6aaf3e",
+        "id": "cwqsdyfehebg008hxr4g"
+      }
+    ],
+    "metadata": [
+      {
+        "workflow_instance_id": null,
+        "workflow_start_time": 1731172049057,
+        "request_timestamp": 0,
+        "session_id": null,
+        "overheads": 1731172049057,
+        "deployment_id": null,
+        "functions": [
+          {
+            "2": {
+              "start_delta": 2,
+              "end_delta": 20088,
+              "mem_before": 137404416,
+              "mem_after": 157892608,
+              "in_payload_bytes": 5600,
+              "out_payload_bytes": 18168
+            }
+          },
+          {
+            "3": {
+              "start_delta": 22356,
+              "end_delta": 42532,
+              "mem_before": 130215936,
+              "mem_after": 147668992,
+              "in_payload_bytes": 18168,
+              "out_payload_bytes": 1091
+            }
+          }
+        ]
+      },
+      {
+        "workflow_instance_id": null,
+        "workflow_start_time": 1731172049237,
+        "request_timestamp": 0,
+        "session_id": null,
+        "overheads": 1731172049237,
+        "deployment_id": null,
+        "functions": [
+          {
+            "2": {
+              "start_delta": 3,
+              "end_delta": 18686,
+              "mem_before": 137306112,
+              "mem_after": 157712384,
+              "in_payload_bytes": 5540,
+              "out_payload_bytes": 17752
+            }
+          },
+          {
+            "3": {
+              "start_delta": 23030,
+              "end_delta": 41267,
+              "mem_before": 129413120,
+              "mem_after": 146821120,
+              "in_payload_bytes": 17752,
+              "out_payload_bytes": 1091
+            }
+          }
+        ]
+      }
+    ],
+    "PollerMetric": {
+      "cwqsdyqehebg008hxr50": [
+        "2024-11-09T17:08:10.936Z",
+        "2024-11-09T17:08:11.513Z"
+      ],
+      "cwqsdyfehebg008hxr4g": [
+        "2024-11-09T17:08:09.628Z",
+        "2024-11-09T17:08:10.441Z"
+      ]
+    }
+  },
+  "metadata": {
+    "workflow_instance_id": 1,
+    "workflow_start_time": 1731172044771,
+    "request_timestamp": 12345,
+    "session_id": "123",
+    "overheads": 1731172032426,
+    "deployment_id": "dynamic-q10-d51-md",
+    "functions": [
+      {
+        "1": {
+          "start_delta": 2,
+          "end_delta": 1951,
+          "mem_before": 137744384,
+          "mem_after": 140419072,
+          "in_payload_bytes": 5369,
+          "out_payload_bytes": 24627
+        }
+      },
+      {
+        "2": {
+          "start_delta": 2,
+          "end_delta": 20088,
+          "mem_before": 137404416,
+          "mem_after": 157892608,
+          "in_payload_bytes": 5600,
+          "out_payload_bytes": 18168
+        }
+      },
+      {
+        "3": {
+          "start_delta": 22356,
+          "end_delta": 42532,
+          "mem_before": 130215936,
+          "mem_after": 147668992,
+          "in_payload_bytes": 18168,
+          "out_payload_bytes": 1091
+        }
+      },
+      {
+        "2": {
+          "start_delta": 3,
+          "end_delta": 18686,
+          "mem_before": 137306112,
+          "mem_after": 157712384,
+          "in_payload_bytes": 5540,
+          "out_payload_bytes": 17752
+        }
+      },
+      {
+        "3": {
+          "start_delta": 23030,
+          "end_delta": 41267,
+          "mem_before": 129413120,
+          "mem_after": 146821120,
+          "in_payload_bytes": 17752,
+          "out_payload_bytes": 1091
+        }
+      },
+      {
+        "4": {
+          "start_delta": 47444,
+          "end_delta": 47444,
+          "mem_before": 21131264,
+          "mem_after": 21131264,
+          "in_payload_bytes": 32567,
+          "out_payload_bytes": 32567
+        }
+      },
+      {
+        "5": {
+          "start_delta": 222184,
+          "end_delta": 249939,
+          "mem_before": 129802240,
+          "mem_after": 138428416,
+          "in_payload_bytes": 32567,
+          "out_payload_bytes": 67621
+        }
+      },
+      {
+        "6": {
+          "start_delta": 325931,
+          "end_delta": 326610,
+          "mem_before": 137764864,
+          "mem_after": 138186752,
+          "in_payload_bytes": 67605,
+          "out_payload_bytes": 8390
+        }
+      },
+      {
+        "253": {
+          "start_delta": 327879,
+          "end_delta": 328195,
+          "mem_before": 41394176,
+          "mem_after": 41984000,
+          "in_payload_bytes": 8262,
+          "out_payload_bytes": 8262
+        }
+      }
+    ]
+  }
+}

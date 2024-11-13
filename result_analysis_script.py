@@ -7,7 +7,8 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 import datetime
 
 
-cost_factor  = 0.000016
+az_cost_factor  = 0.000016
+aws_cost_factor = 0.0000166667
 
 def read_dictionary_from_file(file_path):
     with open(file_path, 'r') as file:
@@ -33,8 +34,8 @@ def quantum_results(job_id,ibmq_token):
     # print('quantum_usage_sec',quantum_usage_sec)
     # print('total_queue_waittime',total_queue_waittime.total_seconds())
     dic = {
-        'quantum_usage_sec':quantum_usage_sec,
-        'total_queue_waittime':total_queue_waittime.total_seconds()-quantum_usage_sec,
+        'Quantum_Exec_Time':quantum_usage_sec,
+        'Quantum_Queue_Time':total_queue_waittime.total_seconds()-quantum_usage_sec,
         'job_id' :  job_id, 
         'ibmq_token' : ibmq_token      
     }
@@ -44,10 +45,21 @@ def creating_outobject(url):
     # data = read_dictionary_from_file(path)
     # print(data)
     # return 
-    print(url)
+    print(f"Processing {url}")
+    data = None
+    csp = 'aws' if 'aws' in url.lower() else 'azure'
+    if csp == 'aws':
+        with open(url) as f:
+            json_data = json.load(f)
+            res = {
+                "_body": json_data['body'],
+                "_metadata": json_data['metadata'],
+                "instanceId": json_data['metadata']['deployment_id']
+            }
+            data = {"output": json.dumps(res), "instanceId": json_data['metadata']['deployment_id']}
     if url.endswith(".json"):
         with open(url) as f:
-            data = json.load(f)
+            data = data or json.load(f)
     else :
         response_API = requests.get(url)
         data = response_API.text
@@ -64,8 +76,16 @@ def creating_outobject(url):
     out_obj=json.loads(data['output'])
     # print(out_obj['_body'].keys())
     boddy=out_obj['_body']
-    boddy['devices']=[{'device':'ibm_brisbane','job_id' : 'cnnejcgalmrcvvncrb9g',
-    'qtoken' : '83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2'}]
+    boddy['devices'] = boddy['jobs'] if 'jobs' in boddy else None
+    # change all instances of key 'id' to key 'job_id'
+    if boddy['devices'] != None:
+        for i in range(len(boddy['devices'])):
+            boddy['devices'][i]['job_id'] = boddy['devices'][i].pop('id')
+
+    # boddy['devices']=[{'device':'ibm_brisbane','job_id' : 'cnnejcgalmrcvvncrb9g',
+    # 'qtoken' : '83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2'}, {'device':'ibm_brisbane','job_id' : 'cnnejcgalmrcvvncrb9g',
+    # 'qtoken' : '83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2'}]
+    print("Deives", boddy['devices'])
     out_obj=out_obj['_metadata']['functions']
     quantum_list = boddy['devices'] if 'devices' in boddy else None
     out=[]
@@ -81,6 +101,7 @@ def creating_outobject(url):
             mem_after = obj['mem_after']
             net_time=abs(end_delta-start_delta)
             net_mem=abs(mem_after-mem_before)
+            payload_size=int(obj['in_payload_bytes'])
             temp={
                 'NodeId':fn_name,
                 'start_delta':start_delta,
@@ -89,7 +110,9 @@ def creating_outobject(url):
                 'mem_after':mem_after,
                 'net_time':net_time,
                 'net_mem':net_mem,
-                'cost':cost_factor*(net_time/1000)*(net_mem/1073741824)
+                # measure cost based on azure or aws
+                'cost':aws_cost_factor*(net_time/1000)*(net_mem/1073741824) if csp == 'aws' else az_cost_factor*(net_time/1000)*(net_mem/1073741824),
+                'inter_function_payload_size':payload_size
             }
             out.append(temp)
     return out,instanceId,quantum_list
@@ -130,7 +153,8 @@ class result_analysis:
     'mem_after': 'max',
     'net_time': 'sum',
     'net_mem': 'sum',
-    'cost': 'sum'
+    'cost': 'sum',
+    'inter_function_payload_size': 'sum'
 })
             print(df)
             df=df_grouped
@@ -175,24 +199,29 @@ class result_analysis:
                     (critical_path,(max_time,max_cost))=(path,(time,cost))
             max_time=max_time/1000
             start_node_data=df.loc['1'].to_dict()
-            end_node_data=df.loc['253'].to_dict()
+            # end node should be the highest node id
+            end_node_data=df.loc[str(len(data['Nodes']))].to_dict()
+            print("End Node Data",end_node_data)
+            # end_node_data=df.loc['253'].to_dict()
             start_timestamp=start_node_data['start_delta']
             end_timestamp=end_node_data['end_delta']
             total_workflow_exec_time=(end_timestamp-start_timestamp)/1000
             waiting_time=(total_workflow_exec_time-max_time)
             total_cost=df['cost'].sum()
             total_func_exec_time = df['net_time'].sum()/1000
+            inter_function_payload_size = df['inter_function_payload_size'].sum()
 
             print('For workflow:\t', workflow_name,'\n\t InstanceId:\t',instance_id ,'\n\t\tTotal workflow execution time(2E Workflow Exec. Time):\t',total_workflow_exec_time ,'\n\t\tTotal function execution time:\t',total_func_exec_time, 'seconds\n\t\tTotal funtion exec time(as per critical path):\t',max_time,'seconds\n\t\tTotal waiting time(as per critical path):\t',waiting_time,'seconds\n\t\tCritical Path:\t',critical_path,'\b\b\n\t\tTotal Cost: \t$ ',total_cost)
             results={
                 "WorkFlowName":workflow_name,
                 "InstanceId":instance_id,
+                "TotalCost":format(total_cost, '.20f'),
                 "Total_workflow_exec_time_E2E":total_workflow_exec_time,
-                "TotalFuntionExecutionTimeWithCritical":max_time,
-                "TotalFuntionExecutionTime":float(total_func_exec_time),
+                "E2E_WF_Exec_Time":max_time,
+                "Inter_Function_Time":float(total_func_exec_time),
                 "Total_waiting_time":waiting_time,
                 "CriticalPath":critical_path,
-                "TotalCost":total_cost,
+                "Inter_Function_Payload_Size": str(inter_function_payload_size),
                 "PathResults": []
             }
             
@@ -209,7 +238,7 @@ class result_analysis:
             
             print("*****************************************************************************")
             print(quantum_list)
-            if quantum_list != None and 'device' in quantum_list[0] and 'job_id' in quantum_list[0]:
+            if quantum_list != None and 'device' in quantum_list[0] and 'job_id' in quantum_list[0] and "-" not in quantum_list[0]['job_id']:
                 qresults = []
                 for dict in quantum_list:
                     qtoken= dict['qtoken']
@@ -219,8 +248,15 @@ class result_analysis:
             print("*****************************************************************************")
             
             if poller_ex_time != -1:
-                results["Poller_ex_time"] = poller_ex_time
-                results["Exec_time_excluding_poller"] = (float(total_func_exec_time) - float(poller_ex_time))
+                results["Async_Poller_Time"] = poller_ex_time
+                results["Inter_Function_Time_Excluding_Poller"] = (float(total_func_exec_time) - float(poller_ex_time))
+                results['Total_Quantum_Queue_Time'] = sum([x['Quantum_Queue_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
+                results['Total_Quantum_Exectime'] = sum([x['Quantum_Exec_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
+                if 'Q_Results' in results:
+                    results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
+                elif 'job_id' in quantum_list[0]:
+                    results['Job_Ids'] = ','.join([x['job_id'] for x in quantum_list]) if quantum_list != None else ''
+                results
             # result_dir = wf_path + '/Results'
             result_dir = out_path
 

@@ -1,0 +1,31 @@
+{
+	"credentials": {
+		"ibmq": {
+			"qtoken": "IBMQ_TOKEN"
+		}
+	},
+	"devices": [
+		{
+			"device": "ibm_brisbane"
+		}
+	],
+	"data": {
+		"circuit": "eJztW92K00AUziT9d/0H8WahXjWBKpsmW13wh7WuUnQFt3shikLdza6B2traXRARxIu+hO8h+Are9A30KbwQL3RbZzquNJuTDiYd58xFKaffN+c7Z84kZ0LzoN64W99cILpGB/G62jnPeHrwtaDxMfqdUMTa6HP95r3a86bfrvm9rT2/f9VeKhfd6xRNmeT96va2ub7XMuvtvrfr9cyKVS42Xr941mmZpeHg8dKTknVgOQJhhyIqoQgnFOGGIpZDEdVQxOVQxJVQxMpvxO1Wp9k3S3bVvbTiOFXbdWzHrbp2pVQuvux5W/4rv9O+tuxY1v7+oTUcr86nb1b5y+fV+x8K7xYXv36crPNwAEAfY4UCQi+w30Ho49RugNAnqD0FQp+k9jQIfYraMyD0aWrPgtBnqD0HQp+l9vxw8OZtd7QHCxohXe3wIH/NYrDcsKhZPEwp08Bmn8yUobMRbfrYeHSn2ffG/nfYJOcv3tr8ceH7jQhkMp2sHUFuPJyQxRyx4PUA8lptYxIjdweTFlsCA8ioMv56kqPqZSDrImRDJLmGmKMIlxSdu4NJ0+NKYAAZVc6yzIS7g0lLenujSqz6f6QyhhAFr99y3GVkIKdEyGmR5KbFHEW4tqe4O5i0VFwJDCCjylmW2eDuYNKS3t6oEhty9VTCHClR9TKEqMRdRoYQBfslObo6GcgZEXJWJLlZMUcRbrIZ7g4mLRNXAgPIqHKWZU5zdzBpSW9vVIkHYLVU4gFYDpVKFCO2unOkMoYQleiXZAhRsPOX43wiAzknQs6LJDcv5ihCH5Hj7mDScnElMICMKmdZ5ix3B5OW9PZGlfgoRy2V+ChHDpVKFCO2unOkMoYQleiXZAhRsPOX43ySHDnCTTbfHVvgSVHmzY1kyPhqkDIqYY6U+b97MmR8oUIOlcr8mTAGlUn3NagSn2GrpRKfYcuhUolixDP+HKnEM/4U8v+kMukCm3+Vmvbzj8EovwClFkX1",
+		"observables": [
+			"ZIIIIIIIII",
+			"IZIIIIIIII",
+			"IIZIIIIIII",
+			"IIIZIIIIII",
+			"IIIIZIIIII",
+			"IIIIIZIIII",
+			"IIIIIIZIII",
+			"IIIIIIIZII",
+			"IIIIIIIIZI",
+			"IIIIIIIIIZ"
+		],
+		"metadata": {
+			"depth": 37,
+			"num_qubits": 10
+		}
+	}
+}

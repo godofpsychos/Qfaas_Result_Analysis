@@ -1,0 +1,373 @@
+{
+  "statusCode": 200,
+  "body": {
+      "data": {
+          "result": [
+              -0.03431800000000007,
+              -0.05998400000000008,
+              -0.5319900000000007,
+              -0.0749360000000001,
+              -0.22691600000000034,
+              0.17645200000000022,
+              -0.3727800000000005,
+              0.09083600000000014,
+              0.010474000000000011,
+              0.08140000000000011,
+              -0.02111400000000005,
+              -0.09647600000000013,
+              -0.4610480000000007,
+              -0.04797600000000006,
+              -0.3290120000000004,
+              0.20803000000000027,
+              -0.3120360000000004,
+              0.0729520000000001,
+              0.0020060000000000078,
+              0.09794600000000014
+          ]
+      },
+      "jobs": [
+          {
+              "id": "cwhntwb31we000880s1g",
+              "device": "ibm_brisbane",
+              "qtoken": "fb804469cc1318d06646c35238d29648129e646722c2e5f578397ae50198cc20f8dd7fcc2c402becce89e5af3c2dbac15d00d2dc7ce8abea05480a4bc1729b49"
+          },
+          {
+              "id": "cwhnv3w31we000880s40",
+              "device": "ibm_brisbane",
+              "qtoken": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+          }
+      ],
+      "PollerMetric": {
+          "cwhntwb31we000880s1g": [
+              "2024-10-31T10:35:30.053Z",
+              "2024-10-31T10:34:49.408Z",
+              "2024-10-31T10:34:49.426Z",
+              "2024-10-31T10:34:49.442Z",
+              "2024-10-31T10:34:49.439Z",
+              "2024-10-31T10:34:49.410Z",
+              "2024-10-31T10:34:49.402Z",
+              "2024-10-31T10:34:49.432Z",
+              "2024-10-31T10:34:49.431Z",
+              "2024-10-31T10:34:49.414Z",
+              "2024-10-31T10:34:49.423Z",
+              "2024-10-31T10:34:49.427Z",
+              "2024-10-31T10:35:05.439Z",
+              "2024-10-31T10:35:05.541Z",
+              "2024-10-31T10:35:05.428Z",
+              "2024-10-31T10:35:05.466Z",
+              "2024-10-31T10:35:05.454Z",
+              "2024-10-31T10:35:05.418Z",
+              "2024-10-31T10:35:43.465Z",
+              "2024-10-31T10:35:43.519Z",
+              "2024-10-31T10:35:43.458Z",
+              "2024-10-31T10:35:43.544Z",
+              "2024-10-31T11:23:35.768Z"
+          ],
+          "cwhnv3w31we000880s40": [
+              "2024-10-31T10:35:59.342Z",
+              "2024-10-31T10:35:01.482Z",
+              "2024-10-31T10:35:01.477Z",
+              "2024-10-31T10:35:01.459Z",
+              "2024-10-31T10:35:01.472Z",
+              "2024-10-31T10:35:01.453Z",
+              "2024-10-31T10:35:01.538Z",
+              "2024-10-31T10:35:01.465Z",
+              "2024-10-31T10:35:01.481Z",
+              "2024-10-31T10:35:01.447Z",
+              "2024-10-31T10:35:01.421Z",
+              "2024-10-31T10:35:01.496Z",
+              "2024-10-31T10:35:17.468Z",
+              "2024-10-31T10:35:17.572Z",
+              "2024-10-31T10:35:17.479Z",
+              "2024-10-31T10:35:17.489Z",
+              "2024-10-31T10:35:17.482Z",
+              "2024-10-31T10:35:17.434Z",
+              "2024-10-31T10:35:55.499Z",
+              "2024-10-31T10:35:55.536Z",
+              "2024-10-31T10:35:55.528Z",
+              "2024-10-31T10:35:55.527Z",
+              "2024-10-31T11:23:36.262Z"
+          ]
+      }
+  },
+  "metadata": {
+      "workflow_instance_id": 1,
+      "workflow_start_time": 1730370863829,
+      "request_timestamp": 12345,
+      "session_id": "123",
+      "overheads": 1730370851484,
+      "deployment_id": "dynamic-q20-d62-rd-ld",
+      "functions": [
+          {
+              "1": {
+                  "start_delta": 3,
+                  "end_delta": 2731,
+                  "mem_before": 137912320,
+                  "mem_after": 140701696,
+                  "in_payload_bytes": 5520,
+                  "out_payload_bytes": 26435
+              }
+          },
+          {
+              "2": {
+                  "start_delta": 5277,
+                  "end_delta": 37161,
+                  "mem_before": 137129984,
+                  "mem_after": 157757440,
+                  "in_payload_bytes": 27403,
+                  "out_payload_bytes": 46757
+              }
+          },
+          {
+              "3": {
+                  "start_delta": 39636,
+                  "end_delta": 96351,
+                  "mem_before": 137744384,
+                  "mem_after": 164069376,
+                  "in_payload_bytes": 46757,
+                  "out_payload_bytes": 6102
+              }
+          },
+          {
+              "4": {
+                  "start_delta": 97176,
+                  "end_delta": 97177,
+                  "mem_before": 21266432,
+                  "mem_after": 21266432,
+                  "in_payload_bytes": 6578,
+                  "out_payload_bytes": 6578
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 199532,
+                  "end_delta": 244063,
+                  "mem_before": 129495040,
+                  "mem_after": 137756672,
+                  "in_payload_bytes": 6578,
+                  "out_payload_bytes": 7322
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 344294,
+                  "end_delta": 371980,
+                  "mem_before": 137756672,
+                  "mem_after": 140845056,
+                  "in_payload_bytes": 7306,
+                  "out_payload_bytes": 7452
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 472229,
+                  "end_delta": 501393,
+                  "mem_before": 140845056,
+                  "mem_after": 141332480,
+                  "in_payload_bytes": 7452,
+                  "out_payload_bytes": 7598
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 601629,
+                  "end_delta": 631770,
+                  "mem_before": 141598720,
+                  "mem_after": 146579456,
+                  "in_payload_bytes": 7598,
+                  "out_payload_bytes": 7808
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 731994,
+                  "end_delta": 768394,
+                  "mem_before": 146837504,
+                  "mem_after": 147116032,
+                  "in_payload_bytes": 7808,
+                  "out_payload_bytes": 7954
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 868632,
+                  "end_delta": 907063,
+                  "mem_before": 147116032,
+                  "mem_after": 147116032,
+                  "in_payload_bytes": 7954,
+                  "out_payload_bytes": 8100
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1007268,
+                  "end_delta": 1034603,
+                  "mem_before": 129511424,
+                  "mem_after": 137904128,
+                  "in_payload_bytes": 8100,
+                  "out_payload_bytes": 8246
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1134824,
+                  "end_delta": 1167554,
+                  "mem_before": 137904128,
+                  "mem_after": 140652544,
+                  "in_payload_bytes": 8246,
+                  "out_payload_bytes": 8520
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1267759,
+                  "end_delta": 1304984,
+                  "mem_before": 140652544,
+                  "mem_after": 141647872,
+                  "in_payload_bytes": 8520,
+                  "out_payload_bytes": 8666
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1405204,
+                  "end_delta": 1438546,
+                  "mem_before": 141647872,
+                  "mem_after": 146620416,
+                  "in_payload_bytes": 8666,
+                  "out_payload_bytes": 8812
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1538782,
+                  "end_delta": 1567022,
+                  "mem_before": 146882560,
+                  "mem_after": 146722816,
+                  "in_payload_bytes": 8812,
+                  "out_payload_bytes": 8958
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1667237,
+                  "end_delta": 1694949,
+                  "mem_before": 146722816,
+                  "mem_after": 146989056,
+                  "in_payload_bytes": 8958,
+                  "out_payload_bytes": 9104
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1795155,
+                  "end_delta": 1836688,
+                  "mem_before": 146989056,
+                  "mem_after": 148865024,
+                  "in_payload_bytes": 9104,
+                  "out_payload_bytes": 9250
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 1936927,
+                  "end_delta": 1978834,
+                  "mem_before": 148865024,
+                  "mem_after": 148865024,
+                  "in_payload_bytes": 9250,
+                  "out_payload_bytes": 9396
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2079060,
+                  "end_delta": 2109758,
+                  "mem_before": 148865024,
+                  "mem_after": 149131264,
+                  "in_payload_bytes": 9396,
+                  "out_payload_bytes": 9542
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2209968,
+                  "end_delta": 2239488,
+                  "mem_before": 149131264,
+                  "mem_after": 149368832,
+                  "in_payload_bytes": 9542,
+                  "out_payload_bytes": 9832
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2339707,
+                  "end_delta": 2370227,
+                  "mem_before": 149368832,
+                  "mem_after": 149368832,
+                  "in_payload_bytes": 9832,
+                  "out_payload_bytes": 9978
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2470496,
+                  "end_delta": 2505786,
+                  "mem_before": 149368832,
+                  "mem_after": 149032960,
+                  "in_payload_bytes": 9978,
+                  "out_payload_bytes": 10124
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2606104,
+                  "end_delta": 2638303,
+                  "mem_before": 149032960,
+                  "mem_after": 148770816,
+                  "in_payload_bytes": 10124,
+                  "out_payload_bytes": 10270
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2738518,
+                  "end_delta": 2767906,
+                  "mem_before": 148770816,
+                  "mem_after": 148770816,
+                  "in_payload_bytes": 10270,
+                  "out_payload_bytes": 10416
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2868257,
+                  "end_delta": 2899416,
+                  "mem_before": 148770816,
+                  "mem_after": 149438464,
+                  "in_payload_bytes": 10416,
+                  "out_payload_bytes": 10562
+              }
+          },
+          {
+              "5": {
+                  "start_delta": 2999643,
+                  "end_delta": 3034750,
+                  "mem_before": 149438464,
+                  "mem_after": 149438464,
+                  "in_payload_bytes": 10562,
+                  "out_payload_bytes": 46030
+              }
+          },
+          {
+              "6": {
+                  "start_delta": 3037386,
+                  "end_delta": 3038053,
+                  "mem_before": 138186752,
+                  "mem_after": 138919936,
+                  "in_payload_bytes": 46030,
+                  "out_payload_bytes": 6588
+              }
+          }
+      ]
+  }
+}

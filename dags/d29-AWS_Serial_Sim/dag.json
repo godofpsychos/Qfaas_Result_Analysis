@@ -1,0 +1,62 @@
+{
+    "WorkflowName": "QXFAASIBMSerialHTest",
+    "Nodes": [
+        {
+            "NodeId": "1",
+            "NodeName": "Splitter",
+            "Path": "examples/SerialSimV3AWS/Splitter",
+            "EntryPoint": "Splitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "2",
+            "NodeName": "Transpiler",
+            "Path": "examples/SerialSimV3AWS/Transpiler",
+            "EntryPoint": "Transpiler.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "3",
+            "NodeName": "Submitter",
+            "Path": "examples/SerialSimV3AWS/Submitter",
+            "EntryPoint": "Submitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "4",
+            "NodeName": "Reconstructor",
+            "Path": "examples/SerialSimV3AWS/Reconstructor",
+            "EntryPoint": "Reconstructor.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        }
+    ],
+    "Edges": [
+        {
+            "Splitter": [
+                "Transpiler"
+            ]
+        },
+        {
+            "Transpiler": [
+                "Submitter"
+            ]
+        },
+        {
+            "Submitter": [
+                "Reconstructor"
+            ]
+        }
+    ]
+}

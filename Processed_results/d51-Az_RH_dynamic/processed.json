@@ -1,0 +1,37 @@
+{
+    "WorkFlowName": "QXFAASMapWFOffload",
+    "InstanceId": "5d88dd281e084c9faa3bb845d310ca2a",
+    "TotalCost": "0.00000308244665527344",
+    "Total_workflow_exec_time_E2E": 1003.645,
+    "E2E_WF_Exec_Time": 68.835,
+    "Inter_Function_Time": 68.96,
+    "Total_waiting_time": 934.81,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "197857",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 68.835,
+            "Total waiting time": 934.81
+        }
+    ],
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 21.019,
+            "job_id": "cwqskx7997wg008xcmsg",
+            "ibmq_token": "b7c27dd1a31636290b170b8330f98759c3927ba482ef07cff47ebd19814bbde4650c16eb625d377844ee5d5ff5310df14191f3e3768878ea2cec6616b346a5f7"
+        },
+        {
+            "Quantum_Exec_Time": 3,
+            "Quantum_Queue_Time": 19.542,
+            "job_id": "cwqsm405v39g008h5gj0",
+            "ibmq_token": "83fbd2a81a2088f83ed2baaa4444ff193a48fb315819591bbc90ac4f00a654004b3d15c2e48a38d939421d40bad5ebd70c56ad4c9cb13676e84a1993b6d223e2"
+        }
+    ],
+    "Async_Poller_Time": 40.651,
+    "Inter_Function_Time_Excluding_Poller": 28.30899999999999,
+    "Total_Quantum_Queue_Time": 40.561,
+    "Total_Quantum_Exectime": 6,
+    "Job_Ids": "cwqskx7997wg008xcmsg,cwqsm405v39g008h5gj0"
+}

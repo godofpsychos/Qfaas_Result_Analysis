@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASIBMSerialHTest",
+    "InstanceId": "serial-wf-q20-d51-rd-sd",
+    "TotalCost": "0.00002700078648691826",
+    "Total_workflow_exec_time_E2E": 214.774,
+    "E2E_WF_Exec_Time": 214.186,
+    "Inter_Function_Time": 214.378,
+    "Total_waiting_time": 0.5879999999999939,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Reconstructor->",
+    "Inter_Function_Payload_Size": "95473",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Reconstructor->",
+            "Total_exec_time": 214.186,
+            "Total waiting time": 0.5879999999999939
+        }
+    ]
+}
