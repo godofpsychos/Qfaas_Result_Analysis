@@ -1,0 +1,150 @@
+{
+  "statusCode": 200,
+  "body": {
+    "data": {
+      "result": [
+        6.619630845600017,
+        1.820803471200004,
+        9.077451429600021,
+        -10.064790367200024,
+        -41.45134532400008,
+        -4.791926368800013,
+        4.9374376848000106,
+        1.266215263200002,
+        0.13258993680000028,
+        3.9177515592000076
+      ]
+    },
+    "jobs": [
+      {
+        "id": "cwttcht997wg008xs4g0",
+        "device": "ibm_brisbane",
+        "qtoken": "ca63d139727d8ddfd9d2ee8ccc8bcc53528b269276c95946c515ba794fd0f3a790eb2febe6ad5fedefd2925a9fcfc5908d044d8d11601d264bcb349fc298bcbc"
+      },
+      {
+        "id": "cwttcj2ehebg008ja9kg",
+        "device": "ibm_brisbane",
+        "qtoken": "b7c27dd1a31636290b170b8330f98759c3927ba482ef07cff47ebd19814bbde4650c16eb625d377844ee5d5ff5310df14191f3e3768878ea2cec6616b346a5f7"
+      },
+      {
+        "id": "cwttcnttdtng00877eqg",
+        "device": "ibm_brisbane",
+        "qtoken": "9fdc2a109f30222415e565c350b002c948a3a0128155129f30e9d43a599228af627bfa61bada0c5fe2c75cebf2dad6be8476de114407ccaa4d58a99623a9cb15"
+      }
+    ],
+    "PollerMetric": {
+      "cwttcht997wg008xs4g0": [
+        "2024-11-14T07:27:04.212Z",
+        "2024-11-14T07:27:04.889Z"
+      ],
+      "cwttcj2ehebg008ja9kg": [
+        "2024-11-14T07:27:04.855Z",
+        "2024-11-14T07:27:05.551Z"
+      ],
+      "cwttcnttdtng00877eqg": [
+        "2024-11-14T07:27:19.467Z",
+        "2024-11-14T07:27:20.350Z"
+      ]
+    }
+  },
+  "metadata": {
+    "workflow_instance_id": 1,
+    "workflow_start_time": 1731569100374,
+    "overheads": 1731569088029,
+    "request_timestamp": 12345,
+    "session_id": "123",
+    "deployment_id": "serial-wf-q10-d37-rd-md",
+    "functions": [
+      {
+        "1": {
+          "start_delta": 2,
+          "end_delta": 38635,
+          "mem_before": 137576448,
+          "mem_after": 195162112,
+          "in_payload_bytes": 5330,
+          "out_payload_bytes": 38181
+        }
+      },
+      {
+        "2": {
+          "start_delta": 68356,
+          "end_delta": 81222,
+          "mem_before": 137277440,
+          "mem_after": 156590080,
+          "in_payload_bytes": 39711,
+          "out_payload_bytes": 53555
+        }
+      },
+      {
+        "4": {
+          "start_delta": 108314,
+          "end_delta": 124606,
+          "mem_before": 129896448,
+          "mem_after": 147402752,
+          "in_payload_bytes": 53555,
+          "out_payload_bytes": 53944
+        }
+      },
+      {
+        "3": {
+          "start_delta": 68209,
+          "end_delta": 84957,
+          "mem_before": 137158656,
+          "mem_after": 162942976,
+          "in_payload_bytes": 39711,
+          "out_payload_bytes": 67163
+        }
+      },
+      {
+        "5": {
+          "start_delta": 108173,
+          "end_delta": 140048,
+          "mem_before": 129949696,
+          "mem_after": 157315072,
+          "in_payload_bytes": 67163,
+          "out_payload_bytes": 67853
+        }
+      },
+      {
+        "6": {
+          "start_delta": 141190,
+          "end_delta": 141190,
+          "mem_before": 21585920,
+          "mem_after": 21585920,
+          "in_payload_bytes": 122511,
+          "out_payload_bytes": 122543
+        }
+      },
+      {
+        "7": {
+          "start_delta": 270975,
+          "end_delta": 307530,
+          "mem_before": 130109440,
+          "mem_after": 141193216,
+          "in_payload_bytes": 122543,
+          "out_payload_bytes": 176168
+        }
+      },
+      {
+        "8": {
+          "start_delta": 324738,
+          "end_delta": 325042,
+          "mem_before": 138158080,
+          "mem_after": 138764288,
+          "in_payload_bytes": 176144,
+          "out_payload_bytes": 3559
+        }
+      },
+      {
+        "253": {
+          "start_delta": 326607,
+          "end_delta": 326926,
+          "mem_before": 41693184,
+          "mem_after": 42098688,
+          "in_payload_bytes": 3527,
+          "out_payload_bytes": 3527
+        }
+      }
+    ]
+  }
+}

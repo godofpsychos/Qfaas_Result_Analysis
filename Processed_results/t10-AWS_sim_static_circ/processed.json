@@ -1,0 +1,23 @@
+{
+    "WorkFlowName": "QXFaaSFanoutSimulatorAWSBranch",
+    "InstanceId": "serial-wf-q20-d51-rd-md",
+    "TotalCost": "0.00042510708819617962",
+    "Total_workflow_exec_time_E2E": 166.442,
+    "E2E_WF_Exec_Time": 142.871,
+    "Inter_Function_Time": 197.525,
+    "Total_waiting_time": 23.570999999999998,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "323789",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Reconstructor->",
+            "Total_exec_time": 88.177,
+            "Total waiting time": 78.265
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+            "Total_exec_time": 142.871,
+            "Total waiting time": 23.570999999999998
+        }
+    ]
+}
