@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASMapWFSerial",
+    "InstanceId": "dynamic-q20-d51-rd-md",
+    "TotalCost": "0.00035908983560987550",
+    "Total_workflow_exec_time_E2E": 74.894,
+    "E2E_WF_Exec_Time": 128.707,
+    "Inter_Function_Time": 128.737,
+    "Total_waiting_time": -53.81299999999999,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "188574",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+            "Total_exec_time": 128.707,
+            "Total waiting time": -53.81299999999999
+        }
+    ]
+}

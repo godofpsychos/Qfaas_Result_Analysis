@@ -126,6 +126,7 @@ def custom_dfs(graph, node, dataframe,result_list, node_to_nodeid,path="",ntime=
     nodeId=node_to_nodeid[node]
     # print(nodeId)
     # print(dataframe)
+    print("Node Id",nodeId)
     node_data=dataframe.loc[nodeId].to_dict()
     # print(node_data)
     ntime+= node_data['net_time']
@@ -246,16 +247,17 @@ class result_analysis:
                     qresults.append(quantum_results(job_id=job_id,ibmq_token=qtoken))
                 results["Q_Results"] = qresults
             print("*****************************************************************************")
-            
+
             if poller_ex_time != -1:
                 results["Async_Poller_Time"] = poller_ex_time
                 results["Inter_Function_Time_Excluding_Poller"] = (float(total_func_exec_time) - float(poller_ex_time))
                 results['Total_Quantum_Queue_Time'] = sum([x['Quantum_Queue_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
                 results['Total_Quantum_Exectime'] = sum([x['Quantum_Exec_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
-                if 'Q_Results' in results:
-                    results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
-                elif 'job_id' in quantum_list[0]:
-                    results['Job_Ids'] = ','.join([x['job_id'] for x in quantum_list]) if quantum_list != None else ''
+                if quantum_list != None:
+                    if 'Q_Results' in results:
+                        results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
+                    elif 'job_id' in quantum_list[0]:
+                        results['Job_Ids'] = ','.join([x['job_id'] for x in quantum_list]) if quantum_list != None else ''
                 results
             # result_dir = wf_path + '/Results'
             result_dir = out_path

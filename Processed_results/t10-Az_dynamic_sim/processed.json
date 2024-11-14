@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASMapWFSerial",
+    "InstanceId": "9522be0cbf8f44d1b6202405fdb528c6",
+    "TotalCost": "0.00002078833569335938",
+    "Total_workflow_exec_time_E2E": 107.904,
+    "E2E_WF_Exec_Time": 75.095,
+    "Inter_Function_Time": 75.118,
+    "Total_waiting_time": 32.809,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "31656",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Reconstructor->",
+            "Total_exec_time": 75.095,
+            "Total waiting time": 32.809
+        }
+    ]
+}

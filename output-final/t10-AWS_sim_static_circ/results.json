@@ -1,0 +1,123 @@
+{
+  "statusCode": 200,
+  "body": {
+    "data": {
+      "result": [
+        -53.0933071911335,
+        0.11552906557917578,
+        -1.4460021145641804,
+        1.60291737690568,
+        -59.09395919367671,
+        -0.666452631354332,
+        -0.9988740026950835,
+        5.174812245368958,
+        62.30949944704771,
+        1.9953092738986014
+      ]
+    },
+    "devices": [
+      {
+        "device": "aer",
+        "backend": "ibm_brisbane"
+      },
+      {
+        "device": "aer",
+        "backend": "ibm_brisbane"
+      },
+      {
+        "device": "aer",
+        "backend": "ibm_brisbane"
+      }
+    ]
+  },
+  "metadata": {
+    "workflow_instance_id": 1,
+    "workflow_start_time": 1731530345372,
+    "overheads": 1731530333027,
+    "request_timestamp": 12345,
+    "session_id": "123",
+    "deployment_id": "serial-wf-q20-d51-rd-md",
+    "functions": [
+      {
+        "1": {
+          "start_delta": 2,
+          "end_delta": 33545,
+          "mem_before": 138027008,
+          "mem_after": 195436544,
+          "in_payload_bytes": 4610,
+          "out_payload_bytes": 37331
+        }
+      },
+      {
+        "2": {
+          "start_delta": 38367,
+          "end_delta": 69497,
+          "mem_before": 136904704,
+          "mem_after": 225665024,
+          "in_payload_bytes": 39184,
+          "out_payload_bytes": 53132
+        }
+      },
+      {
+        "4": {
+          "start_delta": 71960,
+          "end_delta": 95171,
+          "mem_before": 137023488,
+          "mem_after": 354766848,
+          "in_payload_bytes": 53132,
+          "out_payload_bytes": 22529
+        }
+      },
+      {
+        "3": {
+          "start_delta": 36053,
+          "end_delta": 98966,
+          "mem_before": 136409088,
+          "mem_after": 230977536,
+          "in_payload_bytes": 39184,
+          "out_payload_bytes": 66736
+        }
+      },
+      {
+        "5": {
+          "start_delta": 103860,
+          "end_delta": 149982,
+          "mem_before": 137351168,
+          "mem_after": 390909952,
+          "in_payload_bytes": 66736,
+          "out_payload_bytes": 36893
+        }
+      },
+      {
+        "6": {
+          "start_delta": 150649,
+          "end_delta": 150650,
+          "mem_before": 21721088,
+          "mem_after": 21721088,
+          "in_payload_bytes": 59422,
+          "out_payload_bytes": 59510
+        }
+      },
+      {
+        "7": {
+          "start_delta": 166152,
+          "end_delta": 166444,
+          "mem_before": 138514432,
+          "mem_after": 138764288,
+          "in_payload_bytes": 59510,
+          "out_payload_bytes": 2043
+        }
+      },
+      {
+        "253": {
+          "start_delta": 167885,
+          "end_delta": 168198,
+          "mem_before": 41717760,
+          "mem_after": 42123264,
+          "in_payload_bytes": 2011,
+          "out_payload_bytes": 2011
+        }
+      }
+    ]
+  }
+}

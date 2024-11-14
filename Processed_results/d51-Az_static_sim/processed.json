@@ -1,0 +1,23 @@
+{
+    "WorkFlowName": "QXFaaSFanoutSimulatorAWS",
+    "InstanceId": "50a7b0ca68af4c1c8c56e4d6b037e5f1",
+    "TotalCost": "0.00049239110351562501",
+    "Total_workflow_exec_time_E2E": 161.564,
+    "E2E_WF_Exec_Time": 95.539,
+    "Inter_Function_Time": 186.864,
+    "Total_waiting_time": 66.02499999999999,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "288542",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Reconstructor->",
+            "Total_exec_time": 92.143,
+            "Total waiting time": 69.42099999999999
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+            "Total_exec_time": 95.539,
+            "Total waiting time": 66.02499999999999
+        }
+    ]
+}

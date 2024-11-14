@@ -1,0 +1,48 @@
+{
+    "WorkFlowName": "QXFaaSFanoutHWAz",
+    "InstanceId": "d930938196874df19fae78bec065ec2b",
+    "TotalCost": "0.00001502004730224609",
+    "Total_workflow_exec_time_E2E": 1071.099,
+    "E2E_WF_Exec_Time": 119.463,
+    "Inter_Function_Time": 148.872,
+    "Total_waiting_time": 951.636,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "758362",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 100.475,
+            "Total waiting time": 970.6239999999999
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 119.463,
+            "Total waiting time": 951.636
+        }
+    ],
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 70.955,
+            "job_id": "cwtt078tdtng00877b60",
+            "ibmq_token": "ca63d139727d8ddfd9d2ee8ccc8bcc53528b269276c95946c515ba794fd0f3a790eb2febe6ad5fedefd2925a9fcfc5908d044d8d11601d264bcb349fc298bcbc"
+        },
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 64.234,
+            "job_id": "cwtt0b160bqg008pjcg0",
+            "ibmq_token": "b7c27dd1a31636290b170b8330f98759c3927ba482ef07cff47ebd19814bbde4650c16eb625d377844ee5d5ff5310df14191f3e3768878ea2cec6616b346a5f7"
+        },
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 52.126,
+            "job_id": "cwtt0f160bqg008pjcjg",
+            "ibmq_token": "9fdc2a109f30222415e565c350b002c948a3a0128155129f30e9d43a599228af627bfa61bada0c5fe2c75cebf2dad6be8476de114407ccaa4d58a99623a9cb15"
+        }
+    ],
+    "Async_Poller_Time": 64.547,
+    "Inter_Function_Time_Excluding_Poller": 84.32500000000002,
+    "Total_Quantum_Queue_Time": 187.315,
+    "Total_Quantum_Exectime": 12,
+    "Job_Ids": "cwtt078tdtng00877b60,cwtt0b160bqg008pjcg0,cwtt0f160bqg008pjcjg"
+}

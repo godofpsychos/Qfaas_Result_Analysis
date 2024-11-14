@@ -1,0 +1,85 @@
+{
+    "statusCode": 200,
+    "body": {
+      "data": {
+        "result": [
+          0.03515625,
+          0.017578125,
+          0.037109375,
+          -0.056640625,
+          0.017578125,
+          0.05078125
+        ]
+      },
+      "devices": [
+        {
+          "device": "aer",
+          "backend": "ibm_brisbane"
+        },
+        {
+          "device": "aer",
+          "backend": "ibm_brisbane"
+        }
+      ]
+    },
+    "metadata": {
+      "workflow_instance_id": 1,
+      "workflow_start_time": 1731492664221,
+      "request_timestamp": 12345,
+      "session_id": "123",
+      "overheads": 1731492651876,
+      "deployment_id": "trotter-q6-serial",
+      "functions": [
+        {
+          "1": {
+            "start_delta": 2,
+            "end_delta": 6546,
+            "mem_before": 138014720,
+            "mem_after": 168734720,
+            "in_payload_bytes": 3700,
+            "out_payload_bytes": 3308
+          }
+        },
+        {
+          "2": {
+            "start_delta": 8871,
+            "end_delta": 60031,
+            "mem_before": 137338880,
+            "mem_after": 293011456,
+            "in_payload_bytes": 3300,
+            "out_payload_bytes": 5272
+          }
+        },
+        {
+          "3": {
+            "start_delta": 64928,
+            "end_delta": 132042,
+            "mem_before": 137695232,
+            "mem_after": 351985664,
+            "in_payload_bytes": 5272,
+            "out_payload_bytes": 4812
+          }
+        },
+        {
+          "4": {
+            "start_delta": 134956,
+            "end_delta": 135017,
+            "mem_before": 138317824,
+            "mem_after": 138440704,
+            "in_payload_bytes": 4812,
+            "out_payload_bytes": 1538
+          }
+        },
+        {
+          "253": {
+            "start_delta": 136396,
+            "end_delta": 136687,
+            "mem_before": 41459712,
+            "mem_after": 42082304,
+            "in_payload_bytes": 1506,
+            "out_payload_bytes": 1506
+          }
+        }
+      ]
+    }
+  }

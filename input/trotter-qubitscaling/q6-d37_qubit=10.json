@@ -1,0 +1,27 @@
+{
+	"credentials": {
+		"ibmq": {
+			"qtoken": "IBMQ_TOKEN"
+		}
+	},
+	"devices": [
+		{
+			"device": "ibm_brisbane"
+		}
+	],
+	"data": {
+		"circuit": "eJwL9Az29gzhYWRigALG1EIG0VQmOSCTjQEBQPKMUPZhEOHr5OOckZiZ55xZlFyaWWJjpqNgYgdVANP4yzElRcO3NEfDM68kNT21SMNIU0chuDI3KT9HQ/18W7RBrLomUASPCkOCKowIqjAmqMKEoApTiAq3nPzEEg11Sws9SzMDQzMLUwsLA3MLUxNTdR2FgqLU5MzizPw8W1NjTc2yMpSgA4fK29UHD3zS9tBdszhNJzT3z0OYgvNtRKh+BIsfolQ/hskTpfoJVJyZKNVPoeIsRKl+BhVnPd9WXVvICE4djIyFDKiAEc0UZpgdMN1wlWxQ1YwM2EFQlHtiSSrY/DSoEIeErkvIb8Wf9iRoZsSumQGP5uAIuGbKLGKHijDh0OzqHAT3I8I64pxGtwDEoXnUlfRPT0Mj1Q8FzUyUaGamJHCZKbOIhCKFCWEdcU5jolcA4tA86kpyopkRYR1xThvo7D3qytFUTyNX0sGLFJbfQ6OWGQqaWSjRzEpJ4LJSZhEJZTsLwjrinMZCrwDEoXnUleREMzPCOuKcNtDZe9SVow3ykedK4iwaEal+KHhxRNQyQ8GLFLaXhkarbuA0k1ADsSJGOxnwWDcCx28HRvPoBMGIcSVxFo2YUa+B0Tw6rDo0XDliuhR0cOVAt2tGXTk68jeyXDk68jc0XDkiEuNoH38QuXK0j49F83By5UAnsMHvSgaG/0gApgUAx0d2lw==",
+		"observables": [
+			"ZIIIII",
+			"IZIIII",
+			"IIZIII",
+			"IIIZII",
+			"IIIIZI",
+			"IIIIIZ"
+		],
+		"metadata": {
+			"depth": 37,
+			"num_qubits": 6
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+    "WorkFlowName": "QXFaaSFanoutHWAwsBranch",
+    "InstanceId": "serial-wf-q10-d37-rd-md",
+    "TotalCost": "0.00006935238295446817",
+    "Total_workflow_exec_time_E2E": 325.04,
+    "E2E_WF_Exec_Time": 124.115,
+    "Inter_Function_Time": 153.592,
+    "Total_waiting_time": 200.925,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "630195",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 104.65,
+            "Total waiting time": 220.39000000000001
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 124.115,
+            "Total waiting time": 200.925
+        }
+    ],
+    "Q_Results": [
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 26.1,
+            "job_id": "cwttcht997wg008xs4g0",
+            "ibmq_token": "ca63d139727d8ddfd9d2ee8ccc8bcc53528b269276c95946c515ba794fd0f3a790eb2febe6ad5fedefd2925a9fcfc5908d044d8d11601d264bcb349fc298bcbc"
+        },
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 29.627000000000002,
+            "job_id": "cwttcj2ehebg008ja9kg",
+            "ibmq_token": "b7c27dd1a31636290b170b8330f98759c3927ba482ef07cff47ebd19814bbde4650c16eb625d377844ee5d5ff5310df14191f3e3768878ea2cec6616b346a5f7"
+        },
+        {
+            "Quantum_Exec_Time": 4,
+            "Quantum_Queue_Time": 34.336,
+            "job_id": "cwttcnttdtng00877eqg",
+            "ibmq_token": "9fdc2a109f30222415e565c350b002c948a3a0128155129f30e9d43a599228af627bfa61bada0c5fe2c75cebf2dad6be8476de114407ccaa4d58a99623a9cb15"
+        }
+    ],
+    "Async_Poller_Time": 36.555,
+    "Inter_Function_Time_Excluding_Poller": 117.037,
+    "Total_Quantum_Queue_Time": 90.063,
+    "Total_Quantum_Exectime": 12,
+    "Job_Ids": "cwttcht997wg008xs4g0,cwttcj2ehebg008ja9kg,cwttcnttdtng00877eqg"
+}

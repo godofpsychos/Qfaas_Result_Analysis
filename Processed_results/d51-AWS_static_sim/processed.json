@@ -1,0 +1,23 @@
+{
+    "WorkFlowName": "QXFaaSFanoutSimulatorAWS",
+    "InstanceId": "dynamic-q20-d51-rd-md",
+    "TotalCost": "0.00124035029887953514",
+    "Total_workflow_exec_time_E2E": 209.612,
+    "E2E_WF_Exec_Time": 197.483,
+    "Inter_Function_Time": 386.12,
+    "Total_waiting_time": 12.12899999999999,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+    "Inter_Function_Payload_Size": "288920",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Reconstructor->",
+            "Total_exec_time": 191.02,
+            "Total waiting time": 18.591999999999985
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Reconstructor->",
+            "Total_exec_time": 197.483,
+            "Total waiting time": 12.12899999999999
+        }
+    ]
+}

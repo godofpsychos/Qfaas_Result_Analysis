@@ -1,0 +1,18 @@
+{
+    "WorkFlowName": "QXFAASIBMSerialHTest",
+    "InstanceId": "trotter-q6-serial",
+    "TotalCost": "0.00034998112802075195",
+    "Total_workflow_exec_time_E2E": 135.015,
+    "E2E_WF_Exec_Time": 124.879,
+    "Inter_Function_Time": 125.17,
+    "Total_waiting_time": 10.135999999999981,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Reconstructor->",
+    "Inter_Function_Payload_Size": "18590",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Reconstructor->",
+            "Total_exec_time": 124.879,
+            "Total waiting time": 10.135999999999981
+        }
+    ]
+}
