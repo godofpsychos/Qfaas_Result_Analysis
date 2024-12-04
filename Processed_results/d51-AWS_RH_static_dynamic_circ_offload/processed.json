@@ -1,0 +1,28 @@
+{
+    "WorkFlowName": "QXFaaSFanoutHWAz",
+    "InstanceId": "q20-d51-offload",
+    "TotalCost": "0.00000014437717067108",
+    "Total_workflow_exec_time_E2E": 113.202,
+    "E2E_WF_Exec_Time": 12.261,
+    "Inter_Function_Time": 17.667,
+    "Total_waiting_time": 100.941,
+    "CriticalPath": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "648072",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 10.777,
+            "Total waiting time": 102.425
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 12.261,
+            "Total waiting time": 100.941
+        }
+    ],
+    "Async_Poller_Time": 0.704,
+    "Inter_Function_Time_Excluding_Poller": 16.963,
+    "Total_Quantum_Queue_Time": 0,
+    "Total_Quantum_Exectime": 0,
+    "Job_Ids": "c0fe1060-a10a-484e-bf2a-fc859d5e05bf,a24a5fa0-88ce-474d-9ff5-44b500bbe27c,138b0cf1-95e0-4bb4-9324-5352849d4c45,b128bbfe-f809-4389-817e-068962c52eb0"
+}
