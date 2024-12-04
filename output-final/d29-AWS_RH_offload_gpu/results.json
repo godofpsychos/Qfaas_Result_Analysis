@@ -1,0 +1,173 @@
+{
+  "statusCode": 200,
+  "body": {
+    "data": {
+      "result": [
+        1,
+        -1,
+        -1,
+        1,
+        0.046875,
+        0.021484375,
+        0.0078125,
+        0.029296875,
+        1,
+        0.017578125,
+        1,
+        -1,
+        0,
+        1,
+        -0.03515625,
+        -0.00390625,
+        0.00390625,
+        0.005859375,
+        1,
+        -1
+      ]
+    },
+    "jobs": [
+      {
+        "id": "8d875f6d-e9cb-4841-bcb8-3f27b2b5add5",
+        "device": {
+          "device": "aer",
+          "backend": "ibm_brisbane",
+          "gpu": true
+        }
+      },
+      {
+        "id": "779cd243-de87-4425-ba86-59d3caa9ef09",
+        "device": {
+          "device": "aer",
+          "backend": "ibm_brisbane",
+          "gpu": true
+        }
+      },
+      {
+        "id": "67943c67-7bf1-4a48-812c-78444b09846f",
+        "device": {
+          "device": "aer",
+          "backend": "ibm_brisbane",
+          "gpu": true
+        }
+      },
+      {
+        "id": "57654e5c-b917-402e-88d6-1b7e7aefc722",
+        "device": {
+          "device": "aer",
+          "backend": "ibm_brisbane",
+          "gpu": true
+        }
+      },
+      {
+        "id": "4f4032ec-5578-4e2b-a2d7-70477830b229",
+        "device": {
+          "device": "aer",
+          "backend": "ibm_brisbane",
+          "gpu": true
+        }
+      }
+    ],
+    "PollerMetric": {
+      "8d875f6d-e9cb-4841-bcb8-3f27b2b5add5": [
+        "2024-11-14T12:02:24.458019",
+        "2024-11-14T12:02:24.458032"
+      ],
+      "779cd243-de87-4425-ba86-59d3caa9ef09": [
+        "2024-11-14T12:02:24.514945",
+        "2024-11-14T12:02:24.514957"
+      ],
+      "67943c67-7bf1-4a48-812c-78444b09846f": [
+        "2024-11-14T12:02:24.571508",
+        "2024-11-14T12:02:24.571520"
+      ],
+      "57654e5c-b917-402e-88d6-1b7e7aefc722": [
+        "2024-11-14T12:02:24.634138",
+        "2024-11-14T12:02:24.634150"
+      ],
+      "4f4032ec-5578-4e2b-a2d7-70477830b229": [
+        "2024-11-14T12:02:24.690601",
+        "2024-11-14T12:02:24.690612"
+      ]
+    }
+  },
+  "metadata": {
+    "workflow_instance_id": 1,
+    "workflow_start_time": 1731585637320,
+    "request_timestamp": 12345,
+    "session_id": "123",
+    "overheads": 1731585624975,
+    "deployment_id": "q29-d20-offload",
+    "functions": [
+      {
+        "1": {
+          "start_delta": 2,
+          "end_delta": 303,
+          "mem_before": 140320768,
+          "mem_after": 140865536,
+          "in_payload_bytes": 6078,
+          "out_payload_bytes": 15953
+        }
+      },
+      {
+        "2": {
+          "start_delta": 471,
+          "end_delta": 6338,
+          "mem_before": 139759616,
+          "mem_after": 139759616,
+          "in_payload_bytes": 17742,
+          "out_payload_bytes": 18243
+        }
+      },
+      {
+        "3": {
+          "start_delta": 6496,
+          "end_delta": 6636,
+          "mem_before": 35438592,
+          "mem_after": 35483648,
+          "in_payload_bytes": 18243,
+          "out_payload_bytes": 13410
+        }
+      },
+      {
+        "4": {
+          "start_delta": 6823,
+          "end_delta": 6824,
+          "mem_before": 21463040,
+          "mem_after": 21463040,
+          "in_payload_bytes": 13410,
+          "out_payload_bytes": 13410
+        }
+      },
+      {
+        "5": {
+          "start_delta": 107033,
+          "end_delta": 107372,
+          "mem_before": 35995648,
+          "mem_after": 36073472,
+          "in_payload_bytes": 13410,
+          "out_payload_bytes": 19650
+        }
+      },
+      {
+        "6": {
+          "start_delta": 107509,
+          "end_delta": 107533,
+          "mem_before": 138014720,
+          "mem_after": 138014720,
+          "in_payload_bytes": 19610,
+          "out_payload_bytes": 6200
+        }
+      },
+      {
+        "253": {
+          "start_delta": 107701,
+          "end_delta": 107723,
+          "mem_before": 43470848,
+          "mem_after": 43470848,
+          "in_payload_bytes": 6072,
+          "out_payload_bytes": 6072
+        }
+      }
+    ]
+  }
+}

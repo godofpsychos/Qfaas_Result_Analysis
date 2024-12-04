@@ -1,0 +1,28 @@
+{
+    "WorkFlowName": "QXFaaSFanoutHWAz",
+    "InstanceId": "q20-d51-offload-gpu",
+    "TotalCost": "0.00000008693636161652",
+    "Total_workflow_exec_time_E2E": 112.788,
+    "E2E_WF_Exec_Time": 11.81,
+    "Inter_Function_Time": 16.902,
+    "Total_waiting_time": 100.978,
+    "CriticalPath": "Splitter->Transpiler1->Submitter1->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "648510",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler1->Submitter1->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 11.81,
+            "Total waiting time": 100.978
+        },
+        {
+            "Path": "Splitter->Transpiler2->Submitter2->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 10.366,
+            "Total waiting time": 102.422
+        }
+    ],
+    "Async_Poller_Time": 0.721,
+    "Inter_Function_Time_Excluding_Poller": 16.181,
+    "Total_Quantum_Queue_Time": 0,
+    "Total_Quantum_Exectime": 0,
+    "Job_Ids": "e2d8b2d4-5475-4b1d-a765-a601b468320c,fb54c9ec-de97-44db-97d0-d692106244bf,6d636abd-4ba6-473b-8a97-249d808512ad,1aad8d0b-7d6d-4e5f-8981-051b3a9da3fc"
+}

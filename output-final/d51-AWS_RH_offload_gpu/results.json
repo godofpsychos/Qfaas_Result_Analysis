@@ -1,0 +1,137 @@
+{
+    "statusCode": 200,
+    "body": {
+        "data": {
+            "result": [
+                -0.005924224853515625,
+                0.005924224853515625,
+                0.0023708343505859375,
+                0.013952255249023438,
+                0.011037826538085938,
+                -0.036083221435546875,
+                0.050815582275390625,
+                0.0023708343505859375,
+                0.021305084228515625,
+                1.0361328125,
+                -0.0009765625,
+                0.0009765625,
+                -0.0556640625,
+                0.0068359375,
+                -0.0419921875,
+                -0.0283203125,
+                0.0107421875,
+                -0.0556640625,
+                0.01953125,
+                1.0361328125
+            ]
+        },
+        "jobs": [
+            {
+                "id": "ddc3acb1-56fa-46a0-b6fc-3b6390334b19",
+                "device": {
+                    "device": "aer",
+                    "backend": "ibm_brisbane",
+                    "gpu": true
+                }
+            },
+            {
+                "id": "fef11da2-3ccd-4a1f-913e-f669145ceeec",
+                "device": {
+                    "device": "aer",
+                    "backend": "ibm_brisbane",
+                    "gpu": true
+                }
+            }
+        ],
+        "PollerMetric": {
+            "ddc3acb1-56fa-46a0-b6fc-3b6390334b19": [
+                "2024-11-14T12:01:29.203940",
+                "2024-11-14T12:01:29.203955"
+            ],
+            "fef11da2-3ccd-4a1f-913e-f669145ceeec": [
+                "2024-11-14T12:01:29.263002",
+                "2024-11-14T12:01:29.263013"
+            ]
+        }
+    },
+    "metadata": {
+        "workflow_instance_id": 1,
+        "workflow_start_time": 1731585580542,
+        "request_timestamp": 12345,
+        "session_id": "123",
+        "overheads": 1731585568197,
+        "deployment_id": "q51-d20-offload",
+        "functions": [
+            {
+                "1": {
+                    "start_delta": 2,
+                    "end_delta": 611,
+                    "mem_before": 140320768,
+                    "mem_after": 140320768,
+                    "in_payload_bytes": 5211,
+                    "out_payload_bytes": 24512
+                }
+            },
+            {
+                "2": {
+                    "start_delta": 812,
+                    "end_delta": 7879,
+                    "mem_before": 139497472,
+                    "mem_after": 139759616,
+                    "in_payload_bytes": 25230,
+                    "out_payload_bytes": 30132
+                }
+            },
+            {
+                "3": {
+                    "start_delta": 8059,
+                    "end_delta": 8157,
+                    "mem_before": 35340288,
+                    "mem_after": 35438592,
+                    "in_payload_bytes": 30132,
+                    "out_payload_bytes": 6669
+                }
+            },
+            {
+                "4": {
+                    "start_delta": 8299,
+                    "end_delta": 8300,
+                    "mem_before": 21463040,
+                    "mem_after": 21463040,
+                    "in_payload_bytes": 6669,
+                    "out_payload_bytes": 6669
+                }
+            },
+            {
+                "5": {
+                    "start_delta": 108547,
+                    "end_delta": 108722,
+                    "mem_before": 35790848,
+                    "mem_after": 35995648,
+                    "in_payload_bytes": 6669,
+                    "out_payload_bytes": 47796
+                }
+            },
+            {
+                "6": {
+                    "start_delta": 108917,
+                    "end_delta": 108979,
+                    "mem_before": 138014720,
+                    "mem_after": 138014720,
+                    "in_payload_bytes": 47780,
+                    "out_payload_bytes": 3468
+                }
+            },
+            {
+                "253": {
+                    "start_delta": 109118,
+                    "end_delta": 109321,
+                    "mem_before": 42659840,
+                    "mem_after": 43470848,
+                    "in_payload_bytes": 3340,
+                    "out_payload_bytes": 3340
+                }
+            }
+        ]
+    }
+}

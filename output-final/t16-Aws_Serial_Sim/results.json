@@ -24,11 +24,11 @@
       "devices": [
         {
           "device": "aer",
-          "bakend": "ibm_brisbane"
+          "backend": "ibm_brisbane"
         },
         {
           "device": "aer",
-          "bakend": "ibm_brisbane"
+          "backend": "ibm_brisbane"
         }
       ]
     },

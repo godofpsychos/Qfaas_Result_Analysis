@@ -1,0 +1,23 @@
+{
+    "WorkFlowName": "QXFAASMapWFOffload",
+    "InstanceId": "q10-d37-offload",
+    "TotalCost": "0.00000316570876975937",
+    "Total_workflow_exec_time_E2E": 113.333,
+    "E2E_WF_Exec_Time": 12.507,
+    "Inter_Function_Time": 12.547,
+    "Total_waiting_time": 100.826,
+    "CriticalPath": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+    "Inter_Function_Payload_Size": "57287",
+    "PathResults": [
+        {
+            "Path": "Splitter->Transpiler->Submitter->Merger->Poller->Reconstructor->",
+            "Total_exec_time": 12.507,
+            "Total waiting time": 100.826
+        }
+    ],
+    "Async_Poller_Time": 0.121,
+    "Inter_Function_Time_Excluding_Poller": 12.426,
+    "Total_Quantum_Queue_Time": 0,
+    "Total_Quantum_Exectime": 0,
+    "Job_Ids": "343e51c0-6f65-4ccd-b63d-16dfe47a42c4"
+}

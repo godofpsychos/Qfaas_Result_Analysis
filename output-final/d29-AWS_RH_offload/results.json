@@ -30,14 +30,14 @@
         "id": "0c559a87-978f-4053-b31f-f89c65d033ce",
         "device": {
           "device": "aer",
-          "bakend": "ibm_brisbane"
+          "backend": "ibm_brisbane"
         }
       },
       {
         "id": "8dd6636f-29ae-4037-ad0e-396246331461",
         "device": {
           "device": "aer",
-          "bakend": "ibm_brisbane"
+          "backend": "ibm_brisbane"
         }
       }
     ],
