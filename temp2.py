@@ -1,11 +1,14 @@
 import os,json,csv,requests
 import pandas as pd
 
-dag_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/dags-final'
-output_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/output-final'
+dag_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/dags'
+output_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/output-sorted'
 
-sub_dir_dag =[sub_dir for dirc, sub_dirc, _ in os.walk(dag_path) for sub_dir in sub_dirc if dirc == dag_path]
+sub_dir_dag = [file for dirc, _, files in os.walk(dag_path) for file in files if file.endswith('.json')]
 sub_dir_out =[sub_dir for dirc, sub_dirc, _ in os.walk(output_path) for sub_dir in sub_dirc if dirc == output_path]
+
+# print(sub_dir_dag)
+# print(sub_dir_out)
 
 def convert_to_csv(data, file_path, column_order=None):
     """
@@ -66,47 +69,54 @@ def get_function_times(results_json, dag_nodes):
     return times
 
 overall_results = []
-for dir in sub_dir_dag:
-    if dir not in sub_dir_out:
-        continue
-    split_str = dir.split('-')
-    experiment_name = split_str[1]
-    subex_name = split_str[0]
-    dag_json_path = f"{dag_path}/{dir}/dag.json"
-    out_json_path = f"{output_path}/{dir}/results.json"
-    with open(dag_json_path, 'r') as dag_f:
-        dag_data = json.load(dag_f)
-    dag_nodes = dag_data['Nodes']
-    node_names = [node['NodeName'] for node in dag_nodes]
-
-    with open(out_json_path, 'r') as f:
-        results_json = json.load(f)
-    # print('::'*50)
-    # print(results_json)
-    # print('::'*50)
-    try:
-        if 'url' in results_json:
-            response = requests.get(results_json['url'])
-            if response.status_code == 200:
-                results_json =  json.loads(response.json()['output'])
-                # print(results_json['_metadata'])
-                # print('--'*50)
-                results_json['metadata'] = results_json.pop('_metadata')
-            else:
-                Exception("Unable to fetch data")
-                exit()
-        function_times = get_function_times(results_json, dag_nodes)
-        function_times["total_time"] = sum(value for value in function_times.values() if isinstance(value, float))
-        function_times["Experiment"] = experiment_name
-        function_times["Sub-experiment"] = subex_name
-        overall_results.append(function_times)
-    except Exception as e:
-        print(f"Error processing {out_json_path}: {e}")
-        exit()
+for dir in sub_dir_out:
+    sub_sub_dir = os.listdir(f"{output_path}/{dir}")
+    # print(sub_sub_dir)
+    for json_res_file in sub_sub_dir:
+        split_str = json_res_file.split('-')
+        # experiment_name = split_str[1:]
+        experiment_name = '-'.join(split_str[1:])
+        experiment_name = experiment_name.replace('.json','')
+        # print("experiment name:", experiment_name)
+        subex_name = split_str[0]
+        for file in sub_dir_dag:
+            filename = file.replace('.json','')
+            if filename in json_res_file:
+                dag_json_path = f"{dag_path}/{file}" 
+        out_json_path = f"{output_path}/{dir}/{json_res_file}"
+        with open(dag_json_path, 'r') as dag_f:
+            dag_data = json.load(dag_f)
+        dag_nodes = dag_data['Nodes']
+        node_names = [node['NodeName'] for node in dag_nodes]
+        # print("RES file",json_res_file)
+        with open(out_json_path, 'r') as f:
+            results_json = json.load(f)
+        # print('::'*50)
+        # print(results_json)
+        # print('::'*50)
+        try:
+            if 'url' in results_json:
+                response = requests.get(results_json['url'])
+                if response.status_code == 200:
+                    results_json =  json.loads(response.json()['output'])
+                    # print(results_json['_metadata'])
+                    # print('--'*50)
+                    results_json['metadata'] = results_json.pop('_metadata')
+                else:
+                    Exception("Unable to fetch data")
+                    exit()
+            function_times = get_function_times(results_json, dag_nodes)
+            function_times["total_time"] = sum(value for value in function_times.values() if isinstance(value, float))
+            function_times["Experiment"] = experiment_name
+            function_times["Sub-experiment"] = subex_name
+            overall_results.append(function_times)
+        except Exception as e:
+            print(f"Error processing {out_json_path}: {e}")
+            exit()
 
 # print(overall_results)
 # file_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/func_res.json'
-file_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/func_res.csv'
+file_path = '/home/tarunpal/Desktop/temp/Qfaas_Result_Analysis/func_res2.csv'
 
 # # Open the file in write mode and use json.dump() to write the data
 # with open(file_path, 'w') as file:
