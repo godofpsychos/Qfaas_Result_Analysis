@@ -219,7 +219,7 @@ class result_analysis:
                 "TotalCost":format(total_cost, '.20f'),
                 "Total_workflow_exec_time_E2E":total_workflow_exec_time,
                 "E2E_WF_Exec_Time":max_time,
-                "Inter_Function_Time":float(total_func_exec_time),
+                "Inter_Function_Time":float(total_workflow_exec_time-total_func_exec_time),
                 "Total_waiting_time":waiting_time,
                 "CriticalPath":critical_path,
                 "Inter_Function_Payload_Size": str(inter_function_payload_size),
@@ -253,6 +253,7 @@ class result_analysis:
                 results["Inter_Function_Time_Excluding_Poller"] = (float(total_func_exec_time) - float(poller_ex_time))
                 results['Total_Quantum_Queue_Time'] = sum([x['Quantum_Queue_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
                 results['Total_Quantum_Exectime'] = sum([x['Quantum_Exec_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
+                results['Max_Queuing_time'] = max([x['Quantum_Queue_Time'] for x in results["Q_Results"]]) if 'Q_Results' in results else 0
                 if quantum_list != None:
                     if 'Q_Results' in results:
                         results['Job_Ids'] = ','.join([x['job_id'] for x in results["Q_Results"]]) if 'Q_Results' in results else ''
