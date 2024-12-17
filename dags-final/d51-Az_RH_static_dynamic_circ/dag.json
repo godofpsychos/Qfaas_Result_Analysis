@@ -1,0 +1,123 @@
+{
+    "WorkflowName": "QXFaaSFanoutHWAz",
+    "Nodes": [
+        {
+            "NodeId": "1",
+            "NodeName": "Splitter",
+            "Path": "examples/static-qfanout-hardware-az/Splitter",
+            "EntryPoint": "Splitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "2",
+            "NodeName": "Transpiler1",
+            "Path": "examples/static-qfanout-hardware-az/Transpiler",
+            "EntryPoint": "Transpiler.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "3",
+            "NodeName": "Transpiler2",
+            "Path": "examples/static-qfanout-hardware-az/Transpiler2",
+            "EntryPoint": "Transpiler.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "4",
+            "NodeName": "Submitter1",
+            "Path": "examples/static-qfanout-hardware-az/Submitter",
+            "EntryPoint": "Submitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "5",
+            "NodeName": "Submitter2",
+            "Path": "examples/static-qfanout-hardware-az/Submitter2",
+            "EntryPoint": "Submitter.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "6",
+            "NodeName": "Merger",
+            "Path": "examples/static-qfanout-hardware-az/Merger",
+            "EntryPoint": "Merger.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": true,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "7",
+            "NodeName": "Poller",
+            "Path": "examples/static-qfanout-hardware-az/Poller",
+            "EntryPoint": "Poller.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        },
+        {
+            "NodeId": "8",
+            "NodeName": "Reconstructor",
+            "Path": "examples/static-qfanout-hardware-az/Reconstructor",
+            "EntryPoint": "Reconstructor.py",
+            "CSP": "NA",
+            "MemoryInMB": 1536,
+            "IsAsync": false,
+            "IsContainerised": true
+        }
+    ],
+    "Edges": [
+        {
+            "Splitter": [
+                "Transpiler1",
+                "Transpiler2"
+            ]
+        },
+        {
+            "Transpiler1": [
+                "Submitter1"
+            ]
+        },
+        {
+            "Transpiler2": [
+                "Submitter2"
+            ]
+        },
+        {
+            "Submitter1": [
+                "Merger"
+            ]
+        },
+        {
+            "Submitter2": [
+                "Merger"
+            ]
+        },
+        {
+            "Merger": [
+                "Poller"
+            ]
+        },
+        {
+            "Poller": [
+                "Reconstructor"
+            ]
+        }
+    ]
+}

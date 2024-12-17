@@ -20,7 +20,7 @@
           "id": "f11bf759-b3e0-43db-9bcd-1a661eae1ad0",
           "device": {
             "device": "aer",
-            "bakend": "ibm_brisbane"
+            "backend": "ibm_brisbane"
           }
         }
       ],

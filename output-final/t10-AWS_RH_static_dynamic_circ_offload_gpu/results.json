@@ -1,0 +1,159 @@
+{
+    "statusCode": 200,
+    "body": {
+        "data": {
+            "result": [
+                2.6032529890537264,
+                3.1871499426662924,
+                0.027547346055507634,
+                -3.5926675379276283,
+                -0.1277857281267643,
+                0.023075070977210982,
+                1.385597614198923,
+                0.009501276165246967,
+                -2.621926394104958,
+                1.5982930205762387
+            ]
+        },
+        "jobs": [
+            {
+                "id": "07959404-b42c-45b5-a263-45934d1b3d62",
+                "device": {
+                    "device": "aer",
+                    "bakend": "ibm_brisbane",
+                    "gpu": true
+                }
+            },
+            {
+                "id": "87348f80-9c54-44f2-82ee-ad6f73c3ac52",
+                "device": {
+                    "device": "aer",
+                    "bakend": "ibm_brisbane",
+                    "gpu": true
+                }
+            },
+            {
+                "id": "bc642e5b-d818-4f42-a911-11b78e37a82f",
+                "device": {
+                    "device": "aer",
+                    "bakend": "ibm_brisbane",
+                    "gpu": true
+                }
+            }
+        ],
+        "PollerMetric": {
+            "07959404-b42c-45b5-a263-45934d1b3d62": [
+                "2024-11-14T19:57:13.148968",
+                "2024-11-14T19:57:13.148979"
+            ],
+            "87348f80-9c54-44f2-82ee-ad6f73c3ac52": [
+                "2024-11-14T19:57:13.306206",
+                "2024-11-14T19:57:13.306217"
+            ],
+            "bc642e5b-d818-4f42-a911-11b78e37a82f": [
+                "2024-11-14T19:57:13.461090",
+                "2024-11-14T19:57:13.461100"
+            ]
+        }
+    },
+    "metadata": {
+        "workflow_instance_id": 1,
+        "workflow_start_time": 1731614093107,
+        "overheads": 1731614080762,
+        "request_timestamp": 12345,
+        "session_id": "123",
+        "deployment_id": "q10-d37-offload-gpu",
+        "functions": [
+            {
+                "1": {
+                    "start_delta": 2,
+                    "end_delta": 32514,
+                    "mem_before": 196796416,
+                    "mem_after": 198111232,
+                    "in_payload_bytes": 5046,
+                    "out_payload_bytes": 38270
+                }
+            },
+            {
+                "2": {
+                    "start_delta": 32642,
+                    "end_delta": 38564,
+                    "mem_before": 144310272,
+                    "mem_after": 145289216,
+                    "in_payload_bytes": 39425,
+                    "out_payload_bytes": 41685
+                }
+            },
+            {
+                "4": {
+                    "start_delta": 38710,
+                    "end_delta": 38776,
+                    "mem_before": 36122624,
+                    "mem_after": 36196352,
+                    "in_payload_bytes": 41685,
+                    "out_payload_bytes": 42090
+                }
+            },
+            {
+                "3": {
+                    "start_delta": 32661,
+                    "end_delta": 39263,
+                    "mem_before": 145747968,
+                    "mem_after": 146649088,
+                    "in_payload_bytes": 39425,
+                    "out_payload_bytes": 43577
+                }
+            },
+            {
+                "5": {
+                    "start_delta": 39411,
+                    "end_delta": 39526,
+                    "mem_before": 36089856,
+                    "mem_after": 36126720,
+                    "in_payload_bytes": 43577,
+                    "out_payload_bytes": 44299
+                }
+            },
+            {
+                "6": {
+                    "start_delta": 39648,
+                    "end_delta": 39648,
+                    "mem_before": 21852160,
+                    "mem_after": 21852160,
+                    "in_payload_bytes": 87424,
+                    "out_payload_bytes": 87428
+                }
+            },
+            {
+                "7": {
+                    "start_delta": 139843,
+                    "end_delta": 140355,
+                    "mem_before": 36372480,
+                    "mem_after": 36433920,
+                    "in_payload_bytes": 87428,
+                    "out_payload_bytes": 117047
+                }
+            },
+            {
+                "8": {
+                    "start_delta": 140535,
+                    "end_delta": 140564,
+                    "mem_before": 138522624,
+                    "mem_after": 138522624,
+                    "in_payload_bytes": 117023,
+                    "out_payload_bytes": 3968
+                }
+            },
+            {
+                "253": {
+                    "start_delta": 140671,
+                    "end_delta": 140701,
+                    "mem_before": 43352064,
+                    "mem_after": 43352064,
+                    "in_payload_bytes": 3936,
+                    "out_payload_bytes": 3936
+                }
+            }
+        ]
+    }
+}
